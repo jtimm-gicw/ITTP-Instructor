@@ -1,0 +1,149 @@
+/* 102 - Class 05
+   Completed style.css for "The Awesome Shop" demo
+   External CSS file: styles that apply to the whole page
+*/
+
+/* -----------------------------------------------------
+   Global page defaults
+   ----------------------------------------------------- */
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  margin: 0;
+  padding: 0;
+  line-height: 1.5;
+  background-color: #fafafa;
+  color: #333;
+  /* This sets the default font, removes browser margins,
+     and gives the page a light gray background. */
+}
+
+/* -----------------------------------------------------
+   Page layout containers
+   ----------------------------------------------------- */
+header {
+  background-color: #ffffff;
+  border-bottom: 1px solid #ddd;
+  padding: 16px;
+  text-align: center;
+  /* Header is white with a bottom border, and all content
+     inside is centered (like the shop title and nav). */
+}
+
+/* MAIN: centered and using a simple grid for sections */
+main {
+  max-width: 960px;
+  margin: 20px auto;
+  padding: 0 16px;
+
+  display: grid;          /* NEW: turns <main> into a grid container */
+  grid-template-columns: 1fr;  /* 1 column on small screens */
+  gap: 20px;              /* space between each <section> card */
+  /* This keeps the content centered and stacked nicely. */
+}
+
+/* On wider screens, show two columns of sections */
+@media (min-width: 768px) {
+  main {
+    grid-template-columns: 1fr 1fr; /* 2 equal columns */
+  }
+
+  main section:first-child {
+    grid-column: 1 / -1; /* The first section (hero) stretches across both columns */
+  }
+}
+
+/* FOOTER at bottom */
+footer {
+  background-color: #f5f5f5;  /* slightly darker than body */
+  padding: 20px;
+  text-align: center;
+  /* NOTE: You also have inline CSS on the <footer> tag.
+     Inline CSS will override these values for demo purposes. */
+}
+
+/* -----------------------------------------------------
+   Headings
+   ----------------------------------------------------- */
+h1 {
+  color: #ff5733;      /* default external color for h1 (orange) */
+  text-align: center;
+  margin: 0 0 10px;
+  /* NOTE: In your HTML, internal CSS also styles h1.
+     Internal (in the <style> tag) will override this color,
+     so students can see the CSS cascade: external → internal → inline. */
+}
+
+/* -----------------------------------------------------
+   Navigation
+   ----------------------------------------------------- */
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 8px 0 0;
+  text-align: center;  /* centers the list items */
+}
+
+nav li {
+  display: inline-block; /* puts nav items side-by-side */
+  margin-right: 20px;
+}
+
+nav li:last-child {
+  margin-right: 0; /* removes extra space after the last link */
+}
+
+nav a {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+}
+
+nav a:hover {
+  text-decoration: underline; /* simple hover effect */
+}
+
+/* -----------------------------------------------------
+   Sections (the "cards" in the main area)
+   ----------------------------------------------------- */
+section {
+  background-color: #ffffff;
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #eee;
+  /* Each section looks like a card with a white background,
+     soft rounded corners, and a light border. */
+}
+
+/* -----------------------------------------------------
+   Paragraphs
+   ----------------------------------------------------- */
+p {
+  padding: 10px 0;
+  /* Adds vertical breathing room around text. */
+  /* NOTE: Some <p> tags use inline styles (color, font-size)
+     in your HTML. Those inline styles will override this rule,
+     which is perfect for showing the order of CSS. */
+}
+
+/* -----------------------------------------------------
+   Images
+   ----------------------------------------------------- */
+img {
+  width: 100%;          /* Image fills its container width */
+  max-width: 100%;      /* Prevents it from growing too big */
+  display: block;       /* Removes extra whitespace under image */
+  border-radius: 10px;  /* Rounds corners */
+  margin: 0 auto;       /* Centers the image in its section */
+  /* NOTE: Internal CSS in your <style> tag also sets border-radius.
+     It's okay if they match—great chance to show that multiple
+     places can style the same element. */
+}
+
+/* -----------------------------------------------------
+   Footer text
+   ----------------------------------------------------- */
+footer p {
+  font-size: 14px;
+  margin: 0;
+  /* Small, simple text in the footer. */
+}
