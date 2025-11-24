@@ -1,0 +1,56 @@
+/* Basic page style */
+body {
+  background: linear-gradient(to bottom, #0b0f29, #1a225c);
+  color: white;
+  font-family: Arial, sans-serif;
+  text-align: center;
+  padding: 20px;
+}
+
+/* Title */
+h1 {
+  font-size: 3rem;
+  margin-bottom: 10px;
+}
+
+/* Intro text */
+#intro {
+  font-size: 1.3rem;
+  margin-bottom: 20px;
+}
+
+/* Rocket gallery layout */
+#rocket-gallery {
+  display: flex; /* The items inside (your rocket images) will line up nicely in a row. */
+  justify-content: center; /* This centers all the rockets horizontally in the middle of the page.*/
+  flex-wrap: wrap;/*This allows rockets to move onto new rows when the row gets too full. Without this, they would all try to stay on one long row and overflow off the screen. */
+  gap: 20px; /* This creates space between each rocket box. */
+  margin-top: 20px; /* Adds space above the whole gallery. This stops it from being jammed against whatever is above it. */
+}
+
+/* Each rocket box */
+.rocket-box {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 20px;
+  border-radius: 12px;
+  width: 300px; /* bigger box → bigger image */
+  transition: transform 0.2s;
+}
+
+/* Hover effect */
+.rocket-box:hover {
+  transform: scale(1.1);
+}
+
+/* Rocket image */
+.rocket-box img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+/* Rocket label */
+.rocket-box p {
+  margin-top: 10px;
+  font-weight: bold;
+  color: #f6d86b;
+}
