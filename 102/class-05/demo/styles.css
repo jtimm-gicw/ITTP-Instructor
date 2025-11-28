@@ -90,6 +90,7 @@ section {
 /* Paragraphs */
 p {
   padding: 10px 0;          /* layout: padding inside element */
+  font-size: 14px;
 }
 
 /* Images */
@@ -98,6 +99,7 @@ img {
   max-width: 100%;
   display: block;
   border-radius: 10px;      /* layout/style: rounded corners */
+  /* border: 2px solid rgb(0, 0, 0); */
 }
 
 /* Footer text */
