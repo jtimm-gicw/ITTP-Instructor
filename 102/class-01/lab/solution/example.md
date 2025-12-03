@@ -1,14 +1,14 @@
-# 🌱 Growth Mindset — Jason Timm
+# Growth Mindset — Jason Timm
 
 Hello! My name is **Jason Timm**, and I’m a lifelong learner who recently transitioned from education into **software development**.  
 I enjoy solving problems, building creative web projects, and helping others learn new skills.
 
 You can check out my GitHub portfolio here:  
-👉 [Visit My GitHub Profile](https://github.com/jasontimm)
+👉 [Visit My GitHub Profile](https://github.com/jtimm-gicw)
 
----
+---             
 
-## 💡 What Does "Growth Mindset" Mean to Me?
+## What Does "Growth Mindset" Mean to Me?
 
 A **growth mindset** means believing that my skills and intelligence can be **developed through effort, curiosity, and persistence**.  
 It’s about seeing challenges as opportunities to learn, rather than proof that I’m not good enough.  
@@ -19,7 +19,7 @@ When something feels difficult, it just means I’m *growing*.
 
 ---
 
-## 🔁 3 Reminders to Stay in a Growth Mindset
+## 3 Reminders to Stay in a Growth Mindset
 
 1. **Embrace the struggle** — mistakes are how I learn.  
 2. **Ask for help** when I’m stuck instead of giving up.  
@@ -27,7 +27,7 @@ When something feels difficult, it just means I’m *growing*.
 
 ---
 
-### 🧭 My Learning Promise
+### My Learning Promise
 
 - I will stay **curious**.  
 - I will be **kind to myself** when things are hard.  
@@ -35,7 +35,7 @@ When something feels difficult, it just means I’m *growing*.
 
 ---
 
-### 🛠️ Markdown Features Used in This Page
+### _Markdown Features Used in This Page_
 
 - Headings (`#`, `##`, `###`)  
 - **Bold text** and *italic text*  
