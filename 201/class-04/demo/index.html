@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>CSS Layout Demo</title>
+
+  <style>
+    /* =========================
+       GLOBAL STYLES
+       ========================= */
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      margin: 0;
+      padding: 0;
+    }
+
+    h2 {
+      margin-top: 2rem;
+      border-bottom: 2px solid #ccc;
+      padding-bottom: 0.5rem;
+    }
+
+    section {
+      padding: 1rem;
+    }
+
+    /* =========================
+       STEP 1: NO LAYOUT
+       (Default browser behavior)
+       ========================= */
+
+    /* No CSS needed here */
+
+    /* =========================
+       STEP 2: CENTERED PAGE
+       ========================= */
+    #main {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 1rem;
+      background: #f4f4f4;
+    }
+
+    /* =========================
+       STEP 3: DISPLAY
+       ========================= */
+    .block {
+      background: #d9edf7;
+      margin-bottom: 1rem;
+    }
+
+    .inline {
+      background: #fcf8e3;
+    }
+
+    /* =========================
+       STEP 4: BOX MODEL
+       ========================= */
+    .simple {
+      width: 300px;
+      background: #dff0d8;
+      margin-bottom: 1rem;
+    }
+
+    .fancy {
+      width: 300px;
+      padding: 20px;
+      border: 5px solid #333;
+      background: #f2dede;
+    }
+
+    /* =========================
+       STEP 5: POSITION
+       ========================= */
+    .relative-box {
+      position: relative;
+      background: #e8eaf6;
+      height: 150px;
+    }
+
+    .absolute-box {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      background: #c5cae9;
+      padding: 10px;
+    }
+
+    .fixed-box {
+      position: fixed;
+      bottom: 10px;
+      right: 10px;
+      background: #000;
+      color: white;
+      padding: 10px;
+      font-size: 0.9rem;
+    }
+
+    /* =========================
+       STEP 6: FLOAT
+       ========================= */
+    .float-box {
+      float: left;
+      width: 150px;
+      height: 100px;
+      background: #b3e5fc;
+      margin: 1rem;
+    }
+
+    .clearfix {
+      overflow: auto;
+    }
+
+    /* =========================
+       STEP 7: INLINE-BLOCK
+       ========================= */
+    .inline-block {
+      display: inline-block;
+      width: 150px;
+      height: 100px;
+      background: #ffe082;
+      margin: 0.5rem;
+      vertical-align: top;
+    }
+
+    /* =========================
+       STEP 8: FLEXBOX
+       ========================= */
+    .flex-container {
+      display: flex;
+      gap: 1rem;
+      background: #e0f7fa;
+      padding: 1rem;
+    }
+
+    .flex-item {
+      background: #80deea;
+      padding: 1rem;
+      flex: 1;
+      text-align: center;
+    }
+
+    /* =========================
+       STEP 9: MEDIA QUERY
+       ========================= */
+    @media (max-width: 600px) {
+      .flex-container {
+        flex-direction: column;
+      }
+    }
+
+  </style>
+</head>
+<body>
+
+  <!-- FIXED POSITION DEMO -->
+  <div class="fixed-box">I'm fixed!</div>
+
+  <div id="main">
+
+    <h1>CSS Layout Demo</h1>
+    <p>Resize the browser and watch what happens.</p>
+
+    <!-- DISPLAY -->
+    <h2>Display: Block vs Inline</h2>
+
+    <div class="block">I am a block element</div>
+    <div class="block">I take full width</div>
+
+    <p>
+      This is text with an
+      <span class="inline">inline span</span>
+      inside it.
+    </p>
+
+    <!-- BOX MODEL -->
+    <h2>Box Model</h2>
+
+    <div class="simple">Simple box (300px)</div>
+    <div class="fancy">Fancy box (padding + border)</div>
+
+    <!-- POSITION -->
+    <h2>Position</h2>
+
+    <div class="relative-box">
+      Relative Parent
+      <div class="absolute-box">
+        Absolute Child
+      </div>
+    </div>
+
+    <!-- FLOAT -->
+    <h2>Float</h2>
+
+    <div class="clearfix">
+      <div class="float-box">Float 1</div>
+      <div class="float-box">Float 2</div>
+      <p>This text wraps around floats.</p>
+    </div>
+
+    <!-- INLINE-BLOCK -->
+    <h2>Inline-Block</h2>
+
+    <div class="inline-block">Box A</div>
+    <div class="inline-block">Box B</div>
+    <div class="inline-block">Box C</div>
+
+    <!-- FLEXBOX -->
+    <h2>Flexbox</h2>
+
+    <div class="flex-container">
+      <div class="flex-item">One</div>
+      <div class="flex-item">Two</div>
+      <div class="flex-item">Three</div>
+    </div>
+
+  </div>
+
+</body>
+</html>

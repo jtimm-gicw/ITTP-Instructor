@@ -1,0 +1,121 @@
+/* 
+  COLOR PALETTE (Teaching Reference)
+  Cream: #fff7f0
+  Pink:  #ffd6d6
+  Mint:  #c9f2e3
+  Brown: #8b4513
+  Text:  #555
+*/
+
+/* 
+  GLOBAL PAGE STYLES
+*/
+body {
+  background-color: #fff7f0; /* Light cream background */
+  margin: 0;                /* Removes default browser margin */
+  padding: 0;               /* Removes default browser padding */
+  color: #555;              /* Soft dark text color */
+}
+
+/* 
+  HEADER STYLES
+*/
+#site-header {
+  background-color: #ffd6d6; /* Soft pink background */
+  text-align: center;        /* Centers header content */
+  padding: 25px;             /* Space inside header */
+}
+
+.shop-name {
+  margin: 0; /* Removes default spacing above heading */
+}
+
+/* 
+  MAIN CONTENT AREA
+*/
+#main-content {
+  padding: 20px; /* Adds space around page content */
+}
+
+/* 
+  SHARED SECTION STYLES
+*/
+.section {
+  background-color: white;   /* White card-style background */
+  padding: 20px;             /* Inner spacing */
+  margin-bottom: 25px;       /* Space between sections */
+  border-radius: 10px;       /* Rounded corners */
+}
+
+/* 
+  SECTION HEADINGS
+*/
+.section-title {
+  margin-top: 0;             /* Removes extra space above heading */
+  color: #8b4513;            /* Brown cookie-themed color */
+}
+
+/* 
+  COOKIE CARD LAYOUT
+*/
+.cookie-card {
+  display: flex;             /* Places image and text side-by-side */
+  gap: 20px;                 /* Space between items */
+  background-color: #c9f2e3; /* Light mint background */
+  padding: 15px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+/* 
+  COOKIE IMAGE PLACEHOLDER
+*/
+.cookie-image {
+  width: 120px;
+  height: 120px;
+  background-color: white;
+  border: 2px dashed #8b4513; /* Dashed border shows placeholder */
+  display: flex;
+  align-items: center;        /* Centers content vertically */
+  justify-content: center;    /* Centers content horizontally */
+  font-size: 0.9rem;
+}
+
+/* 
+  COOKIE INFO TEXT
+*/
+.cookie-info {
+  flex: 1; /* Allows text area to expand */
+}
+
+.cookie-name {
+  margin-top: 0;
+}
+
+/* 
+  CUSTOMER QUOTES
+*/
+.customer-quote {
+  font-style: italic; /* Italic text for quotes */
+  margin-top: 10px;
+}
+
+/* 
+  TESTIMONIAL STYLES
+*/
+.testimonial {
+  background-color: #ffd6d6; /* Soft pink highlight */
+  padding: 10px;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+/* 
+  FOOTER STYLES
+*/
+#site-footer {
+  background-color: #8b4513; /* Dark brown footer */
+  color: white;
+  text-align: center;
+  padding: 15px;
+}

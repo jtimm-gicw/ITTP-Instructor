@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<!--
+  This declaration tells the browser this is an HTML5 document.
+  It must always be the very first line.
+-->
+
+<html>
+<!--
+  The <html> tag wraps all content on the page.
+-->
+
+<head>
+  <!--
+    The <head> contains information ABOUT the page,
+    not content that is shown to the user.
+  -->
+
+  <title>Class 2 Demo</title>
+  <!--
+    The <title> sets the name shown in the browser tab.
+  -->
+
+  <link rel="stylesheet" type="text/css" href="style.css" />
+  <!--
+    This links our external CSS file.
+    It allows us to style the page without writing styles in HTML.
+  -->
+</head>
+
+<body>
+  <!--
+    Everything inside the <body> is visible to the user.
+  -->
+
+  <main>
+    <!--
+      <main> is a semantic element.
+      It represents the main content of the page.
+    -->
+
+    <section>
+      <!--
+        <section> groups related content together.
+        It helps with structure and accessibility.
+      -->
+
+      <!--
+        This is an h1 heading.
+        Headings range from h1 (most important) to h6 (least important).
+      -->
+      <h1>This is the second class</h1>
+
+      <!--
+        <p> stands for paragraph.
+        It is used for blocks of text.
+      -->
+      <p>Some content</p>
+
+      <!--
+        <ol> creates an ordered (numbered) list.
+      -->
+      <ol>
+        <li>Priority Item #1</li>
+        <li>Priority Item #2</li>
+        <li>Priority Item #3</li>
+      </ol>
+
+      <!--
+        <ul> creates an unordered (bulleted) list.
+        Order does not matter.
+      -->
+      <ul>
+        <li>Here is a random task</li>
+        <li>Here is another random task</li>
+        <li>Here is final random task</li>
+      </ul>
+
+      <!--
+        This paragraph uses a CLASS.
+        Classes can be reused on multiple elements.
+      -->
+      <p class="more-content">This is some more content</p>
+
+      <!--
+        This paragraph uses an ID.
+        IDs must be unique on the page.
+      -->
+      <p id="something-else">This has something else entirely.</p>
+
+      <!--
+        Another paragraph using the same class.
+        This demonstrates how classes are reusable.
+      -->
+      <p class="more-content">This is our last bit of content</p>
+
+    </section>
+  </main>
+
+  <!--
+    This script tag links our JavaScript file.
+    It is placed at the bottom so the HTML loads first.
+  -->
+  <script src="app.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<!-- 
+  Declares this as an HTML5 document
+-->
+<html lang="en">
+  <head>
+    <!-- Character encoding for proper text display -->
+    <meta charset="UTF-8" />
+
+    <!-- Makes the layout responsive on different screen sizes -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Title shown in the browser tab -->
+    <title>Sweet Crumbs Cookie Shop</title>
+
+    <!-- Links external CSS file -->
+    <link rel="stylesheet" href="styles.css" />
+
+    <!-- 
+      INTERNAL CSS
+      Used sparingly for demo purposes
+    -->
+    <style>
+      body {
+        /* Sets the default font for the entire page */
+        font-family: Arial, sans-serif;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- 
+      HEADER
+      Contains branding and intro text
+    -->
+    <header id="site-header">
+      <h1 class="shop-name">Sweet Crumbs Cookie Shop</h1>
+
+      <!-- 
+        INLINE CSS
+        Demonstrates styling applied to one element only
+      -->
+      <p style="color: #8b4513;">
+        Freshly baked cookies every day!
+      </p>
+    </header>
+
+    <!-- MAIN CONTENT: Holds the primary page content -->
+    <main id="main-content">
+
+      <!-- COOKIE MENU SECTION -->
+      <section class="section cookie-menu">
+        <h2 class="section-title">Our Cookies</h2>
+
+        <!-- COOKIE CARD: Reusable structure for each cookie -->
+        <div class="cookie-card">
+            <div class="cookie-image">
+            <img src="https://plus.unsplash.com/premium_photo-1668772704254-c4c4798b0e5d?q=80&w=464&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Chocolate chip cookie">
+            </div>
+        </div>
+
+          <!-- Cookie text content -->
+          <div class="cookie-info">
+            <h3 class="cookie-name">Chocolate Chip</h3>
+
+            <!-- Placeholder text using Lorem Ipsum -->
+            <p class="cookie-description">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            </p>
+
+            <!-- Customer quote -->
+            <blockquote class="customer-quote">
+              “Best cookie I’ve ever had!”
+            </blockquote>
+          </div>
+        </div>
+
+        <!-- SECOND COOKIE CARD -->
+        <div class="cookie-card">
+          <div class="cookie-image">
+            <img src="https://images.unsplash.com/photo-1652282561156-d02574e618f1?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Oatmeal Rasin Cookies">
+          </div>
+
+          <div class="cookie-info">
+            <h3 class="cookie-name">Oatmeal Raisin</h3>
+            <p class="cookie-description">
+              Lorem ipsum dolor sit amet.
+            </p>
+
+            <blockquote class="customer-quote">
+              “Soft, chewy, and perfect with coffee.”
+            </blockquote>
+          </div>
+        </div>
+      </section>
+
+    <!-- THIRD COOKIE CARD -->
+        <div class="cookie-card">
+          <!-- Placeholder for future cookie image -->
+          <div class="cookie-image">
+            <img src="https://plus.unsplash.com/premium_photo-1699372281460-9b6a198244df?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Peanut Butter Cookies">
+          </div>
+
+          <!-- Cookie text content -->
+          <div class="cookie-info">
+            <h3 class="cookie-name">Peanut Butter</h3>
+
+            <!-- Placeholder text using Lorem Ipsum -->
+            <p class="cookie-description">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            </p>
+
+            <!-- Customer quote -->
+            <blockquote class="customer-quote">
+              “You could really taste the creamy peanut butter. De-lic-i-ous!”
+            </blockquote>
+          </div>
+        </div>
+
+      <!-- 
+        TESTIMONIALS SECTION
+        Uses an ID because it appears only once
+      -->
+      <section class="section testimonials" id="testimonials">
+        <h2 class="section-title">What Our Customers Say</h2>
+
+        <blockquote class="testimonial">
+          “I stop by every week — totally worth it.”
+        </blockquote>
+
+        <blockquote class="testimonial">
+          “These cookies make my day better.”
+        </blockquote>
+
+        <blockquote class="testimonial">
+          “We can't stop at just one. Now I am 40lbs heavier.  I just ordered more.”
+        </blockquote>
+      </section>
+
+      <!-- 
+        VISIT US SECTION
+      -->
+      <section class="section visit-us">
+        <h2 class="section-title">Visit Us</h2>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        </p>
+      </section>
+    </main>
+
+    <!-- 
+      FOOTER
+      Contains copyright info
+    -->
+    <footer id="site-footer">
+      <p>© 2026 Sweet Crumbs Cookie Shop</p>
+    </footer>
+  </body>
+</html>

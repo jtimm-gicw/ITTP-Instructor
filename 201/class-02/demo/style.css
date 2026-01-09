@@ -1,0 +1,43 @@
+/*
+  This rule targets all h1 elements.
+  It changes the font family.
+*/
+h1 {
+  font-family: helvetica;
+}
+
+/*
+  This rule targets ALL paragraph elements.
+  It changes the text color.
+*/
+p {
+  color: red;
+}
+
+/*
+  This is a very specific selector.
+  It targets:
+  - paragraph elements
+  - with the class "more-content"
+  - that are inside a section
+*/
+section p.more-content {
+  background-color: #FF0000;
+}
+
+/*
+  This rule targets any element
+  that has the class "more-content".
+*/
+.more-content {
+  background-color: #0000FF;
+}
+
+/*
+  This rule targets the element
+  with the ID "something-else".
+  IDs should be unique.
+*/
+#something-else {
+  border: 5px dashed #00FF00;
+}

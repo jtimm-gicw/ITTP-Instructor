@@ -1,0 +1,33 @@
+body {
+    background-color: #fff7f0;
+    margin: 10px;
+    /* font-size: 20px; */
+    text-align: center;
+}
+
+header {
+    background-color: #8b4513;
+    color:white;
+}
+
+section {
+    background-color: white;
+    padding:15px;
+    margin-bottom: 20px;
+    border-radius: 25px;
+}
+
+h1, h2 {
+    margin-top: 5px;
+}
+
+ul {
+    padding-left:20px;
+}
+
+li {
+    color:darkmagenta;
+    font-size: 30px;
+}
+
+

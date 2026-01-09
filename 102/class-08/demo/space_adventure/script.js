@@ -11,6 +11,7 @@ TELL STUDENTS:
 */
 
 function getRocketCount() {
+  
   let count;
 
   while (true) {

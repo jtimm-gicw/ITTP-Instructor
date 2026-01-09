@@ -1,6 +1,6 @@
 # Growth Mindset — Jason Timm
 
-Hello! My name is **Jason Timm**, and I’m a lifelong learner who recently transitioned from education into **software development**.  
+Hello! My name is *Jason Timm*, and I’m a lifelong learner who recently transitioned from education into **software development**.  
 I enjoy solving problems, building creative web projects, and helping others learn new skills.
 
 You can check out my GitHub portfolio here:  
@@ -29,22 +29,54 @@ When something feels difficult, it just means I’m *growing*.
 
 ### My Learning Promise
 
-- I will stay **curious**.  
-- I will be **kind to myself** when things are hard.  
+* I will stay **curious**.  
++ I will be **kind to myself** when things are hard.  
 - I will remember that every great developer was once a beginner too.
 
 ---
 
-### _Markdown Features Used in This Page_
+### Markdown Features Used in This Page_
 
 - Headings (`#`, `##`, `###`)  
-- **Bold text** and *italic text*  
+- **Bold text** and *italic text*  _text_ __text__ __*more text*__
 - Lists (ordered and unordered)  
+ * asterisk
+ - hyphen
+ + plus symbol
+ 1. numbers
 - Blockquotes (`>`)  
 - Links (`[text](URL)`)  
 - Horizontal rule (`---`)  
 
 ---
+## Exta Practice
+**Code blocking** or **Code fencing**
+```js
+console.log("hello");
+```
+
+**Block quotes**
+> "This is quoted text."
+> -Albert Einstein
+
+**Checklists**
+*To-Do*
+- [  ] Go to the supermarket
+
+**Tables**
+| Column 1 | Column 2 | Column 3 | Column 4
+|----------|----------|----------|--------
+| Data A   | Data B   | Data C   | Data G
+| Data D   | Data E   | Data F   | 1234
+
+
+
+
+
+
+
+
+
 
 # Table of Contents
 
