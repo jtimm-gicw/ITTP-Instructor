@@ -1,5 +1,5 @@
 /****************************************************
- * VARIABLE SCOPE DEMO (Beginner Friendly)
+ * VARIABLE SCOPE DEMO 
  * 
  * Variable scope = where a variable can be
  * recognized and accessed in your program.
