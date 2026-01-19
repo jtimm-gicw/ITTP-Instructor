@@ -1,0 +1,107 @@
+/* =========================
+   GLOBAL STYLES
+   ========================= */
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  padding: 20px;
+  color: #333;
+}
+
+/* =========================
+   TEXT STYLES
+   ========================= */
+
+h1 {
+  color: #2c3e50;
+  letter-spacing: 1px;
+  margin-bottom: 20px;
+}
+
+article {
+  background-color: #ffffff;
+  padding: 20px;
+  margin-bottom: 30px;
+  border: 1px solid #ddd;
+}
+
+p {
+  font-family: Georgia, serif;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+/* =========================
+   FIGURE STYLES
+   ========================= */
+
+figure {
+  background-color: #ffffff;
+  padding: 15px;
+  border: 1px solid #ccc;
+  max-width: 450px;
+  margin-bottom: 25px;
+}
+
+figcaption {
+  font-size: 14px;
+  color: #555;
+  margin-top: 10px;
+  text-align: center;
+}
+
+/* =========================
+   BASE IMAGE STYLE
+   ========================= */
+
+img {
+  width: 100%;
+  display: block;
+}
+
+/* =========================
+   IMAGE VARIATIONS
+   ========================= */
+
+/* Basic image */
+/* .img-basic { */
+  /* no extra styling */
+/* } */
+
+/* Border example */
+.img-border {
+  border: 4px solid #2c3e50;
+}
+
+/* Rounded corners */
+.img-rounded {
+  border-radius: 12px;
+}
+
+/* Shadow effect */
+.img-shadow {
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* =========================
+   IMAGE SIZE DEMO
+   ========================= */
+
+.image-row {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.img-small {
+  width: 150px;
+}
+
+.img-medium {
+  width: 250px;
+}
+
+.img-large {
+  width: 350px;
+}
