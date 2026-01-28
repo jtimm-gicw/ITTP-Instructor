@@ -79,7 +79,8 @@ function colorPreviewForLoop() {
 
     if (color === null) {
       break;
-    }
+    }   
+  
 
     mainBox.style.border = "6px solid " + color;
   }

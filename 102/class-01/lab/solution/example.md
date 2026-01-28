@@ -56,12 +56,12 @@ console.log("hello");
 ```
 
 **Block quotes**
-> "This is quoted text."
+>"This is quoted text."
 > -Albert Einstein
 
 **Checklists**
 *To-Do*
-- [  ] Go to the supermarket
+- [ x ] Go to the supermarket
 
 **Tables**
 | Column 1 | Column 2 | Column 3 | Column 4

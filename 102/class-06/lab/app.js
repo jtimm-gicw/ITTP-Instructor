@@ -10,7 +10,7 @@ We often use these to explain sections of code.
 // =====================================
 // PROMPT-BASED VERSION (runs immediately)
 // =====================================
-
+/*
 // Ask the user for their name as soon as the page loads
 const name = prompt("What's your name?");
 
@@ -23,36 +23,36 @@ if (name && name.trim() !== "") {
 } else {
   subtitle.textContent = `Welcome friend!`;
 }
-
+*/
 // -------------------------------------
 // Time-based greeting using prompt
 // -------------------------------------
 
-const hourInput = prompt("What hour is it right now? (0-23)");
-const hour = Number(hourInput);
+// const hourInput = prompt("What hour is it right now? (0-23)");
+// const hour = Number(hourInput);
 
-const seasonLine = document.getElementById("season-line");
+// const seasonLine = document.getElementById("season-line");
 
-if (hour >= 0 && hour < 12) {
-  subtitle.textContent = "Good morning!";
-} else if (hour >= 12 && hour < 18) {
-  subtitle.textContent = "Good afternoon!";
-} else if (hour >= 18 && hour <= 23) {
-  subtitle.textContent = "Good evening!";
-} else {
-  subtitle.textContent = "Be careful, add a number between 0–23";
-}
+// if (hour >= 0 && hour < 12) {
+//   subtitle.textContent = "Good morning!";
+// } else if (hour >= 12 && hour < 18) {
+//   subtitle.textContent = "Good afternoon!";
+// } else if (hour >= 18 && hour <= 23) {
+//   subtitle.textContent = "Good evening!";
+// } else {
+//   subtitle.textContent = "Be careful, add a number between 0–23";
+// }
 
 // -------------------------------------
 // Color change using prompt
 // -------------------------------------
 
-const mainBox = document.getElementById("mainBox");
-const color = prompt("Pick a border color (red, green, blue, yellow, #00ff00)");
+// const mainBox = document.getElementById("mainBox");
+// const color = prompt("Pick a border color (red, green, blue, yellow, #00ff00)");
 
-if (color && color.trim() !== "") {
-  mainBox.style.border = "6px solid " + color;
-}
+// if (color && color.trim() !== "") {
+//   mainBox.style.border = "6px solid " + color;
+// }
 
 /* ======================================================
    BUTTON-BASED VERSION (event-driven)

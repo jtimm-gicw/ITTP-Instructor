@@ -16,6 +16,7 @@ Create a variable for a website name that will NOT change.
 ===================================================== */
 
 // Create the variable here
+const name= "Jason";
 
 
 

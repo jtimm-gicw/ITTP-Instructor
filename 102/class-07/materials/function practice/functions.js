@@ -5,15 +5,6 @@
 LIVE PRACTICE: FUNCTIONS
 =====================================
 
-INSTRUCTIONS FOR EACH PRACTICE:
-
-1. READ the code.
-2. TURN the code into a function.
-3. GIVE the function a clear name.
-4. CALL the function so it runs.
-
-DO NOT change what the code does.
-ONLY reorganize it into a function.
 */
 
 /* =====================================
@@ -21,6 +12,8 @@ ONLY reorganize it into a function.
    ===================================== */
 
 // CURRENT CODE (works already):
+
+function sayHi(){
 const name = prompt("What is your name?");
 const greeting = document.getElementById("message");
 
@@ -29,6 +22,9 @@ if (name && name.trim() !== "") {
 } else {
   greeting.textContent = "Hello, friend!";
 }
+}
+
+
 
 /*
 TODO:
@@ -151,4 +147,5 @@ HINTS:
 // ✏️ WRITE YOUR CODE BELOW THIS LINE
 
 
-
+sayHi();
+sayGoodbye();
