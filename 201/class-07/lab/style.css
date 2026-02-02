@@ -1,0 +1,27 @@
+/* 
+  Basic styling so students can clearly SEE the table structure
+  Styling is NOT the focus — logic is
+*/
+
+body {
+  font-family: Arial, sans-serif;
+  padding: 20px;
+}
+
+table {
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+/* Style both header cells and data cells */
+th,
+td {
+  border: 1px solid #333;
+  padding: 8px 12px;
+  text-align: left;
+}
+
+/* Make headers visually distinct */
+th {
+  background-color: #f2f2f2;
+}

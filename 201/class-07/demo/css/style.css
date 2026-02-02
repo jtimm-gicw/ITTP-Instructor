@@ -1,0 +1,82 @@
+/* 
+  Global styles apply to everything.
+  This keeps spacing and sizing consistent.
+*/
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+/* Page background and text color */
+body {
+  background-color: #f9f9f9;
+  color: #333;
+}
+
+/* Header styling */
+header {
+  text-align: center;
+  padding: 20px;
+  background-color: #fff;
+  border-bottom: 1px solid #ddd;
+}
+
+/* Main content wrapper */
+main {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 10px;
+}
+
+/* Each kitten profile */
+article {
+  background: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  padding: 15px;
+}
+
+/* Kitten name */
+h3 {
+  margin-bottom: 5px;
+}
+
+/* Paragraph spacing */
+p {
+  margin-bottom: 10px;
+}
+
+/* Interests list */
+ul {
+  margin-left: 20px;
+  margin-bottom: 10px;
+}
+
+/* Table styling */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 10px;
+}
+
+/* Table cells */
+th, td {
+  border: 1px solid #ccc;
+  padding: 8px;
+  text-align: center;
+}
+
+/* Header cells stand out */
+th {
+  background-color: #f0f0f0;
+}
+
+/* Kitten images */
+img {
+  width: 100%;
+  border-radius: 8px;
+  margin-top: 10px;
+}
