@@ -1,0 +1,65 @@
+/* 
+  ============================
+  CSS BOX MODEL DEMO
+  ============================
+*/
+
+/* 
+  OPTIONAL BEST PRACTICE (SHOW LATER IN DEMO)
+  This makes width include padding and border
+*/
+/*
+* {
+  box-sizing: border-box;
+}
+*/
+
+/* 
+  OPTIONAL DEBUGGING TOOL (SHOW LAST)
+  Lets you SEE every box on the page
+*/
+/*
+* {
+  outline: 1px solid red;
+}
+*/
+
+/* 
+  BASE STYLES FOR THE BOX
+  We will build this step by step during the demo
+*/
+.box {
+
+  /* 
+    STEP 2: CONTENT SIZE
+    Width controls ONLY the content area
+  */
+  width: 200px;
+
+  /* 
+    STEP 3: BORDER
+    Borders add to the total size of the box
+  */
+  border: 3px solid black;
+
+  /* 
+    STEP 4: PADDING
+    Space INSIDE the box
+    Makes text easier to read
+  */
+  padding: 20px;
+
+  /* 
+    STEP 5: MARGIN
+    Space OUTSIDE the box
+    Pushes boxes away from each other
+  */
+  margin: 20px;
+
+  /* 
+    STEP 6: BACKGROUND COLOR
+    Fills content + padding
+    Does NOT fill margin
+  */
+  background-color: lightgray;
+}
