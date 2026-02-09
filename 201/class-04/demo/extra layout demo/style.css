@@ -1,0 +1,105 @@
+/* STEP 1: Normal Flow (default behavior) */
+#box-1,
+#box-2,
+#box-3 {
+  background: lightblue;
+  padding: 20px;
+  margin: 10px 0;
+}
+
+
+/* STEP 3 & 4: Centering with margin:auto + max-width */
+#main {
+  max-width: 600px;
+  margin: 0 auto;
+  background: #eee;
+  padding: 20px;
+}
+
+
+/* STEP 5: Box Model problem */
+#fancy-box {
+  width: 500px;
+  padding: 50px;
+  border: 10px solid black;
+  background: pink;
+}
+
+
+/* STEP 6: Fix box model confusion */
+* {
+  box-sizing: border-box;
+}
+
+
+/* STEP 7: Positioning */
+
+/* Relative parent */
+#parent {
+  position: relative;
+  height: 200px;
+  background: #ddd;
+  margin: 40px 0;
+}
+
+/* Absolute child */
+#child {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: coral;
+  padding: 10px;
+}
+
+/* Fixed positioning */
+#fixed-box {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: black;
+  color: white;
+  padding: 10px;
+}
+
+
+/* STEP 8: Float */
+#float-img {
+  float: right;
+  margin: 0 0 10px 10px;
+}
+
+
+/* STEP 9: Percent-Based Layout */
+#percent-nav {
+  width: 25%;
+  background: lightgreen;
+  padding: 20px;
+}
+
+
+/* STEP 11: inline-block Layout */
+.inline-box {
+  display: inline-block;
+  width: 200px;
+  height: 100px;
+  background: lavender;
+  margin: 5px;
+  text-align: center;
+  line-height: 100px;
+}
+
+
+/* STEP 12: Flexbox Layout */
+#flex-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  background: #222;
+  padding: 20px;
+}
+
+.flex-item {
+  background: orange;
+  padding: 20px;
+}

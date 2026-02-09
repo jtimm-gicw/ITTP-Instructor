@@ -1,6 +1,6 @@
 # Class 4: CSS Layout – Step-by-Step Demo Guide
 
-This guide walks students through **core CSS layout concepts** using a single HTML demo file.
+This guide walks students through **core CSS layout concepts** using an HTML and external css demo file.
 Use this as an instructor-led walkthrough or a student reference.
 
 ---
