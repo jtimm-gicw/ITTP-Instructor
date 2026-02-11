@@ -4,7 +4,7 @@
 
 body {
   font-family: Arial, sans-serif;
-  background-color: #f4f4f4;
+  background-color: lightgrey;
   padding: 20px;
   color: #333;
 }
@@ -23,7 +23,7 @@ article {
   background-color: #ffffff;
   padding: 20px;
   margin-bottom: 30px;
-  border: 1px solid #ddd;
+  border: 1px solid darkslategrey;
 }
 
 p {
@@ -56,8 +56,11 @@ figcaption {
    ========================= */
 
 img {
-  width: 100%;
+  width: 100%; /* Recommended way to resize. This keeps it responsive*/
   display: block;
+  /* max-width: 300px; */  /*Prevents images from getting too large on wide screens. */
+  /* height: 200px; */   /*fixed heights can strech images and distort them
+                          If your image looks squished, height is usually the problem. */
 }
 
 /* =========================
@@ -71,17 +74,20 @@ img {
 
 /* Border example */
 .img-border {
-  border: 4px solid #2c3e50;
+  border: 6px solid #2c3e50;
 }
 
 /* Rounded corners */
 .img-rounded {
   border-radius: 12px;
+  /* border-radius: 50%; */
 }
 
 /* Shadow effect */
 .img-shadow {
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  /* box-shadow: 0 4px 10px #ff9900;*/ 
+     /* box-shadow: 0 0 15px rgba(0, 102, 255, 0.6); */
 }
 
 /* =========================
@@ -91,7 +97,9 @@ img {
 .image-row {
   display: flex;
   gap: 20px;
-  flex-wrap: wrap;
+  flex-wrap: wrap; /* nowrap is DEFAULT --> flex-wrap controls whether flex items stay on one line or move onto multiple lines inside a flex container. 
+With wrap --> items move to the next line when they run out of space
+Creates multiple rows (or columns if using flex-direction: column*/
 }
 
 .img-small {

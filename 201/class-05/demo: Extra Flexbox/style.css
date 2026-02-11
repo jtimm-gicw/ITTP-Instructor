@@ -1,0 +1,35 @@
+/* Universal Styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  padding: 20px;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Container */
+.container {
+  width: 90%;
+  margin: 0 auto;
+  border: 3px solid #333;
+  padding: 10px;
+}
+
+/* Boxes */
+.box {
+  width: 150px;
+  height: 150px;
+}
+
+.box1 { background-color: #ff6b6b; }
+.box2 { background-color: #4ecdc4; }
+.box3 { background-color: #ffe66d; }
+.box4 { background-color: #1a535c; }
