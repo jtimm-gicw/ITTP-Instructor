@@ -1,0 +1,50 @@
+<!-- 
+JavaScript → HTML Table
+
+🧠 Big Picture Reminder:
+We are NOT writing HTML inside JavaScript.
+We are creating elements step-by-step and attaching them.
+
+Rule:
+👉 Create → Fill → Attach
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>JS Tables Mini Demo</title>
+  <style>
+    /* Simple styling so students can clearly see structure */
+    table {
+      border-collapse: collapse;
+      margin-top: 20px;
+      width: 60%;
+    }
+
+    th, td {
+      border: 1px solid black;
+      padding: 8px;
+      text-align: center;
+    }
+
+    th {
+      background-color: #f2f2f2;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>JavaScript Table Demo</h1>
+
+  <!-- 
+This div is intentionally empty.
+JavaScript is responsible for everything inside it.
+  -->
+  <div id="tableContainer">
+    <!-- JavaScript will build and insert the table here -->
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
