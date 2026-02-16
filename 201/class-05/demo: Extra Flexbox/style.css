@@ -18,15 +18,12 @@ h1 {
 /* Container */
 .container {
   width: 90%;
-  height: 900px;
+  /* height: 900px; */
   margin: 0 auto;
   border: 3px solid #333;
   padding: 10px;
 
-  display: flex; 
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
+
 }
 
 /* Boxes */
