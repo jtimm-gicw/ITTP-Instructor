@@ -1,190 +1,175 @@
 /*
-201-Class_06-Mini-Demo_JS_Tables-T
-🧱 JavaScript → HTML Table
+JavaScript → HTML Table
+🏨 Hotel Guests Per Week
 
-REMEMBER:
+🧠 Big Picture Reminder:
+We are NOT writing HTML in JavaScript.
+We are creating elements one piece at a time and attaching them.
+
+RULE:
 👉 Create → Fill → Attach
 */
 
-/* ===============================
-   STEP 1: GET THE PARENT (ANCHOR)
-================================= */
 
-// This is where the table will live
-// If we don’t anchor first, nothing shows up
+/* =====================================
+   STEP 1: GET THE PARENT (ANCHOR POINT)
+====================================== */
+
+// Grab the div with id="tableContainer"
 const container = document.getElementById('tableContainer');
 
-// 🧠 CHECK-IN
-// Q: Why do we need a parent element first?
-// A: Because everything must be attached somewhere in the DOM
 
 
-/* ===============================
+/* =====================================
    STEP 2: CREATE THE <table>
-================================= */
+====================================== */
 
-// Create the table element
+// Create table element
 const table = document.createElement('table');
 
-// Attach it immediately to the container
+// Attach table to container
 container.appendChild(table);
 
-// Now the table exists in the DOM
+// 🔎 At this point:
+// The table exists in the DOM,
+// but it has no rows yet.
 
 
-/* ===============================
+
+/* =====================================
    STEP 3: CREATE A HEADER ROW
-================================= */
+====================================== */
 
-// Tables are made of rows (<tr>)
+// Create a <tr> for the header
 const headerRow = document.createElement('tr');
 
-// Attach header row to table
+// Attach headerRow to the table
 table.appendChild(headerRow);
 
+// 🔎 Now we have:
+// table
+//   └── tr
+//
+// But no header cells yet!
 
-/* ===============================
+
+
+/* =====================================
    STEP 4: ADD HEADER CELLS (<th>)
-================================= */
+====================================== */
 
-// Example headers
-const headers = ['Name', 'Age', 'Favorite Food'];
+/*
 
-// Loop prevents copy-paste and keeps order consistent
+const headers = ['Day', 'Number of Guests'];
+
 for (let i = 0; i < headers.length; i++) {
 
-  // Create a header cell
-  const th = document.createElement('th');
+   const th = document.createElement('th');
+   th.textContent = headers[i];
+   headerRow.appendChild(th);
 
-  // Fill it with text
-  th.textContent = headers[i];
-
-  // Attach it to the header row
-  headerRow.appendChild(th);
 }
 
-// 🧠 CHECK-IN
-// Q: Why use <th> instead of <td>?
-// A: Headers describe the data and improve accessibility
+*/
 
 
-/* ===============================
-   STEP 5: CREATE A DATA ROW
-================================= */
 
-// This row will hold actual data
-const dataRow = document.createElement('tr');
+/* =====================================
+   STEP 5: CREATE HOTEL DATA OBJECT
+====================================== */
 
-// Attach it to table
-table.appendChild(dataRow);
+/*
+
+const hotel = {
+  name: 'Ocean View Hotel',
+  minGuests: 50,
+  maxGuests: 150,
+  dailyGuests: [],
+  totalGuests: 0
+};
+
+*/
 
 
-/* ===============================
-   STEP 6: ADD DATA CELLS (<td>)
-================================= */
 
-// Example row data
-const rowData = ['Alex', '25', 'Pizza'];
+/* =====================================
+   STEP 6: RANDOM NUMBER FUNCTION
+====================================== */
 
-for (let i = 0; i < rowData.length; i++) {
+/*
 
-  // Create a data cell
-  const td = document.createElement('td');
-
-  // Fill it with content
-  td.textContent = rowData[i];
-
-  // Attach to the row
-  dataRow.appendChild(td);
+function getRandomGuests(min, max) {
+  return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
-// 🧠 CHECK-IN
-// Q: What happens if <td> count doesn’t match headers?
-// A: The table becomes misaligned
+*/
 
 
-/* ===============================
-   STEP 7: MULTIPLE ROWS (SCALING)
-================================= */
 
-// Data as an array of arrays
-const people = [
-  ['Alex', 25, 'Pizza'],
-  ['Jordan', 30, 'Sushi'],
-  ['Sam', 22, 'Tacos']
+/* =====================================
+   STEP 7: GENERATE ROWS
+====================================== */
+
+/*
+
+const days = [
+  'Monday','Tuesday','Wednesday',
+  'Thursday','Friday','Saturday','Sunday'
 ];
 
-// Outer loop → controls rows
-for (let i = 0; i < people.length; i++) {
+for (let i = 0; i < days.length; i++) {
 
-  const row = document.createElement('tr');
-  table.appendChild(row);
+   const row = document.createElement('tr');
+   table.appendChild(row);
 
-  // Inner loop → controls cells
-  for (let j = 0; j < people[i].length; j++) {
+   const guests = getRandomGuests(hotel.minGuests, hotel.maxGuests);
 
-    const cell = document.createElement('td');
-    cell.textContent = people[i][j];
-    row.appendChild(cell);
-  }
+   hotel.dailyGuests.push(guests);
+   hotel.totalGuests += guests;
+
+   const dayCell = document.createElement('td');
+   dayCell.textContent = days[i];
+   row.appendChild(dayCell);
+
+   const guestCell = document.createElement('td');
+   guestCell.textContent = guests;
+   row.appendChild(guestCell);
+
 }
 
-// 🧠 CHECK-IN
-// Q: What does outer loop control?
-// A: Number of rows
-// Q: What does inner loop control?
-// A: Number of cells per row
-
-
-/* ===============================
-   STEP 8 (OPTIONAL): SEMANTIC SECTIONS
-================================= */
-
-/*
-Good to mention — not required Day 1
-
-const thead = document.createElement('thead');
-const tbody = document.createElement('tbody');
-
-table.appendChild(thead);
-table.appendChild(tbody);
-
-Then:
-Header rows → thead
-Data rows → tbody
 */
 
 
-/* ===============================
-   🎯 STUDENT MENTAL TEMPLATE
-================================= */
+
+/* =====================================
+   STEP 8: TOTAL ROW
+====================================== */
 
 /*
-1️⃣ Get parent
-2️⃣ Create table
-3️⃣ Add header row
-4️⃣ Add <th> cells
-5️⃣ Add data rows
-6️⃣ Add <td> cells
-7️⃣ Use loops to scale
-*/
 
+const totalRow = document.createElement('tr');
+table.appendChild(totalRow);
 
-/* ===============================
-   ⚠️ COMMON STUDENT MISTAKES
-================================= */
+const totalLabel = document.createElement('td');
+totalLabel.textContent = 'Total Guests';
+totalRow.appendChild(totalLabel);
 
-/*
-❌ Forgetting to append elements
-❌ Creating but never attaching
-❌ Mixing <th> and <td>
-❌ Hard-coding instead of looping
+const totalValue = document.createElement('td');
+totalValue.textContent = hotel.totalGuests;
+totalRow.appendChild(totalValue);
+
 */
 
 
 /*
-🏆 ONE-SENTENCE RULE:
+🧠 LIVE DEMO TEACHING FLOW:
 
-Tables are built row by row,
-and rows are built cell by cell.
+1️⃣ Show nothing renders
+2️⃣ Add table → show empty box
+3️⃣ Add header row → show structure
+4️⃣ Uncomment headers → now it looks real
+5️⃣ Then reveal data logic
+6️⃣ Then reveal totals
+
+Build visually, not all at once.
 */
