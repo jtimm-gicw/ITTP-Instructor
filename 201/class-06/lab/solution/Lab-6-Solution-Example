@@ -1,0 +1,130 @@
+'use strict';
+
+/* =========================================================
+   TASK 1 — GLOBAL DATA (Hours of Operation)
+   Requirement:
+   - Store business hours used by ALL locations
+   ========================================================= */
+
+const hours = [
+  '6am', '7am', '8am', '9am', '10am',
+  '11am', '12pm', '1pm', '2pm', '3pm',
+  '4pm', '5pm', '6pm', '7pm'
+];
+
+
+/* =========================================================
+   TASK 2 — LOCATION OBJECT CONSTRUCTOR
+   Requirement:
+   - Each location must be its own object
+   - Store min/max customers and avg cookies
+   ========================================================= */
+
+function Store(name, minCust, maxCust, avgCookies) {
+  this.name = name;
+  this.minCust = minCust;
+  this.maxCust = maxCust;
+  this.avgCookies = avgCookies;
+
+  this.cookiesPerHour = []; // stores hourly results
+  this.dailyTotal = 0;      // total cookies per day
+}
+
+
+/* =========================================================
+   TASK 3 — RANDOM CUSTOMER GENERATOR
+   Requirement:
+   - Generate random customers using Math.random()
+   ========================================================= */
+
+Store.prototype.randomCustomers = function () {
+  return Math.floor(
+    Math.random() * (this.maxCust - this.minCust + 1)
+  ) + this.minCust;
+};
+
+
+/* =========================================================
+   TASK 4 — CALCULATE HOURLY COOKIE SALES
+   Requirement:
+   - Calculate cookies sold each hour
+   - Store results in an array
+   - Calculate daily total
+   ========================================================= */
+
+Store.prototype.calculateSales = function () {
+
+  for (let i = 0; i < hours.length; i++) {
+
+    let customers = this.randomCustomers();
+    let cookies = Math.ceil(customers * this.avgCookies);
+
+    this.cookiesPerHour.push(cookies);
+    this.dailyTotal += cookies;
+  }
+};
+
+
+/* =========================================================
+   TASK 5 — RENDER DATA TO THE PAGE
+   Requirement:
+   - Display data as unordered lists in browser
+   ========================================================= */
+
+Store.prototype.render = function () {
+
+  // create section container
+  let container = document.getElementById('sales-data');
+
+  // store title
+  let article = document.createElement('article');
+  container.appendChild(article);
+
+  let h2 = document.createElement('h2');
+  h2.textContent = this.name;
+  article.appendChild(h2);
+
+  // unordered list
+  let ul = document.createElement('ul');
+  article.appendChild(ul);
+
+  // hourly data
+  for (let i = 0; i < hours.length; i++) {
+    let li = document.createElement('li');
+    li.textContent = `${hours[i]}: ${this.cookiesPerHour[i]} cookies`;
+    ul.appendChild(li);
+  }
+
+  // daily total
+  let totalLi = document.createElement('li');
+  totalLi.textContent = `Total: ${this.dailyTotal} cookies`;
+  ul.appendChild(totalLi);
+};
+
+
+/* =========================================================
+   TASK 6 — CREATE STORE OBJECTS
+   Requirement:
+   - Each location is its own object
+   ========================================================= */
+
+const seattle = new Store('Seattle', 23, 65, 6.3);
+const tokyo = new Store('Tokyo', 3, 24, 1.2);
+const dubai = new Store('Dubai', 11, 38, 3.7);
+const paris = new Store('Paris', 20, 38, 2.3);
+const lima = new Store('Lima', 2, 16, 4.6);
+
+
+/* =========================================================
+   TASK 7 — RUN APPLICATION
+   Requirement:
+   - Generate data
+   - Display results
+   ========================================================= */
+
+const stores = [seattle, tokyo, dubai, paris, lima];
+
+for (let i = 0; i < stores.length; i++) {
+  stores[i].calculateSales();
+  stores[i].render();
+}

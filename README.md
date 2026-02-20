@@ -2,7 +2,7 @@
 
 This repo is to hold materials used in the **ITTP** courses *(102, 201, 301, 401)* for **PDX** *(Dec 2025- Jan 2027)*
 
-## Table of Contents of Code 102- Intro to Software Development
+## Table of Contents of Code 102, 201, 301, & 401
 
 ### 102
 - [Class 1 Materials](102/class-01)
