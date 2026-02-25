@@ -1,0 +1,113 @@
+/* ---------------------------
+   RESET / BASIC STYLING
+--------------------------- */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  background-color: #1a1a1d; /* dark background for neon pop */
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+main {
+  width: 90%;
+  margin: 2rem auto;
+}
+
+h1 {
+  font-family: 'Fredoka One', cursive;
+  color: #ff00ff; /* neon pink */
+  font-size: 54px;
+  text-shadow: 2px 2px #00ffff, -2px -2px #fffa00; /* neon cyan + yellow glow */
+  margin-bottom: 2rem;
+}
+
+/* ---------------------------
+   GRID CONTAINER
+   Step 1: Start simple
+--------------------------- */
+
+/* container is just a block for now */
+/* .container { */
+  /* border: 3px solid #ff00ff; */
+  /* padding: 1rem; */
+  /* background-color: #2b2b2b; */
+  /* border-radius: 15px; */
+/* } */
+
+/* ---------------------------
+   GRID ITEMS
+   Step 2: Style the boxes
+--------------------------- */
+
+.container div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  color: #f0f0f0;
+  border-radius: 10px;
+  border: 2px solid #00ff77; /* neon border */
+  /* box-shadow: 4px 4px 0px #00ffff; */ /* retro neon shadow */
+  font-size: 1.75rem;
+  text-align: center;
+  padding: 10px;
+  /* add a subtle 80s gradient for demo later */
+}
+
+/* Step 3: Apply neon 80s colors */
+/*
+div:nth-child(4n+1) {
+  background: linear-gradient(135deg, #ff00ff, #ff7f50); 
+}
+
+div:nth-child(4n+2) {
+  background: linear-gradient(135deg, #00ffff, #7fff00);
+}
+
+div:nth-child(4n+3) {
+  background: linear-gradient(135deg, #ff69b4, #ff4500);
+}
+
+div:nth-child(4n) {
+  background: linear-gradient(135deg, #8a2be2, #00ff7f);
+}
+*/
+
+/* ---------------------------
+   GRID LAYOUT
+   Step 4: Activate Grid
+--------------------------- */
+/*
+.container {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr 2fr; 
+  grid-template-rows: repeat(2, 10rem); 
+  gap: 1rem; 
+}
+*/
+
+/* ---------------------------
+   RESPONSIVE LAYOUT
+   Step 5: Add responsiveness
+--------------------------- */
+/*
+@media (max-width: 768px) {
+  .container {
+    grid-template-columns: 1fr 1fr; 
+    grid-template-rows: repeat(4, 10rem);
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    grid-template-columns: 1fr; 
+    grid-template-rows: repeat(8, 10rem);
+  }
+}
+*/

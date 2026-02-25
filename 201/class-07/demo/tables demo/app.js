@@ -58,7 +58,6 @@ table.appendChild(headerRow);
    STEP 4: ADD HEADER CELLS (<th>)
 ====================================== */
 
-/*
 
 const headers = ['Day', 'Number of Guests'];
 
@@ -70,7 +69,7 @@ for (let i = 0; i < headers.length; i++) {
 
 }
 
-*/
+
 
 
 
@@ -78,7 +77,7 @@ for (let i = 0; i < headers.length; i++) {
    STEP 5: CREATE HOTEL DATA OBJECT
 ====================================== */
 
-/*
+
 
 const hotel = {
   name: 'Ocean View Hotel',
@@ -88,7 +87,6 @@ const hotel = {
   totalGuests: 0
 };
 
-*/
 
 
 
@@ -96,13 +94,13 @@ const hotel = {
    STEP 6: RANDOM NUMBER FUNCTION
 ====================================== */
 
-/*
+
 
 function getRandomGuests(min, max) {
   return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
-*/
+
 
 
 
@@ -110,7 +108,7 @@ function getRandomGuests(min, max) {
    STEP 7: GENERATE ROWS
 ====================================== */
 
-/*
+
 
 const days = [
   'Monday','Tuesday','Wednesday',
@@ -137,7 +135,7 @@ for (let i = 0; i < days.length; i++) {
 
 }
 
-*/
+
 
 
 

@@ -73,9 +73,9 @@ console.log(car3.year);
 console.log(car3.color);
 
 // Protoyple Inheritance --> Move the method OUTSIDE the Constructor function 
-// Car.prototype.drive = function(){
-//     console.log(`You drive the ${this.model}`);
-
+Car.prototype.drive = function(){
+    console.log(`You drive the ${this.model}`);
+}
 // Car.prototype.start = function() {
 //   console.log(`${this.model} is starting...`);
 // };
