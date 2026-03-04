@@ -1,4 +1,4 @@
-body {
+/* body {
   font-family: monospace;
 }
 
@@ -28,29 +28,29 @@ nav a {
 nav a:hover {
   text-decoration: underline;
   font-size: xx-large;
-}
+} */
 
-main {
+/* main {
   width: 80%;
   margin: 20px auto;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 20px;
-}
+} */
 
-.four-wide {
+/* .four-wide {
   display: flex;
   gap: 20px;
   justify-content: space-around;
   width: 100%;
-}
+} */
 
-.four-wide img {
+/* .four-wide img {
   width: 100%;
-}
+} */
 
-.two-wide {
+/* .two-wide {
   display: flex;
   gap: 20px;
   width: 100%;
@@ -59,9 +59,9 @@ main {
 
 .two-wide img {
   width: 100%;
-}
+} */
 
-.one-two-wide {
+/* .one-two-wide {
   display: flex;
   width: 100%;
   gap: 20px;
@@ -77,12 +77,12 @@ main {
   overflow: scroll;
   height: 400px;
   font-size: 20px;
-}
+} */
 
-footer {
+/* footer {
   background-color: green;
   height: 100px;
   color: whitesmoke;
   font-size: x-large;
   padding: 20px;
-}
+} */

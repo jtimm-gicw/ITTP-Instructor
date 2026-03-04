@@ -7,7 +7,7 @@
 // STEP 1: Grab the div
 let clickBox = document.getElementById('click-box');
 
-// STEP 2: Add event listener (build this live)
+// STEP 2: Add event listener 
 // clickBox.addEventListener('click', handleClick);
 
 // STEP 3: Create the function
@@ -25,7 +25,7 @@ function handleClick() {
 // STEP 4: Grab the form
 let guestForm = document.getElementById('guest-form');
 
-// STEP 5: Add submit listener (build live)
+// STEP 5: Add submit listener 
 // guestForm.addEventListener('submit', handleSubmit);
 
 
