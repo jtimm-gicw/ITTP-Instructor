@@ -1,0 +1,112 @@
+/* Base styles */
+* {
+  font-family: sans-serif;
+}
+
+body {
+  padding: 20px;
+}
+
+section {
+  margin-bottom: 40px;
+}
+
+/* ===== TRANSITIONS ===== */
+
+/* Step 1: Rounded Box - transition */
+/*
+.rounding {
+  width: 200px;
+  height: 200px;
+  background-color: #0394e6;
+  border-radius: 0;
+  transition: 2s;
+}
+
+.rounding:hover {
+  transition-property: border-radius, background-color;
+  transition-duration: 2s, 2s;
+  transition-timing-function: linear, linear;
+  border-radius: 50%;
+  background-color: #f03c1d;
+}
+*/
+
+/* Step 2: Button hover/active transitions */
+/*
+.doNothing {
+  background-color: #a570da;
+  opacity: 0.8;
+  outline: 2px solid #ffffff;
+  transition: opacity 100ms linear;
+}
+
+.doNothing:hover {
+  transition-property: opacity;
+  transition-duration: 100ms;
+  transition-timing-function: linear;
+  opacity: 1.0;
+}
+
+.doNothing:active {
+  transition-property: outline;
+  transition-duration: 100ms;
+  transition-timing-function: linear;
+  outline: 2px solid yellow;
+}
+*/
+
+/* ===== ANIMATIONS ===== */
+
+/* Step 3: Moving Box Container */
+/*
+.animation {
+  background-color: #cccccc;
+  border: 2px solid #bbbbbb;
+  border-radius: 3%;
+  width: 400px;
+  height: 400px;
+  position: relative;
+}
+*/
+
+/* Step 4: Keyframes for Moving Box */
+/*
+@keyframes moveRight {
+  0%   { left: 0; top: 0; }
+  25%  { left: 90%; top: 25%; }
+  50%  { left: 0%; top: 50%; }
+  75%  { left: 90%; top: 75%; }
+  100% { left: 0%; top: 90%; }
+}
+*/
+
+/* Step 5: Moving Box Element */
+/*
+.animationElement {
+  width: 10%;
+  height: 10%;
+  background-color: #0c8f16;
+  position: relative;
+  animation-name: moveRight;
+  animation-duration: 5s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+*/
+
+/* Step 6: Blinking Text Animation */
+/*
+@keyframes blinkAnimation {
+  0%   { color: #000000; }
+  50%  { color: #ffffff; }
+  100% { color: #000000; }
+}
+
+.blink {
+  animation-name: blinkAnimation;
+  animation-duration: 350ms;
+  animation-iteration-count: infinite;
+  animation-timing-function: steps(3);
+}
+*/

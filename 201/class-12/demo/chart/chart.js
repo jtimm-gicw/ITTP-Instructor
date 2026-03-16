@@ -6,7 +6,7 @@ STEP 5: Get the canvas context
 =====================================
 */
 
-// const ctx = document.getElementById('chart').getContext('2d');
+const ctx = document.getElementById('chart').getContext('2d');
 
 
 /*
@@ -15,8 +15,8 @@ STEP 6: Create some data
 =====================================
 */
 
-// const data = [12, 19, 3, 5, 2, 3];
-// const labelColors = ['red', 'blue', 'yellow', 'green', 'purple', 'orange'];
+const data = [12, 19, 3, 5, 2, 3];
+const labelColors = ['red', 'blue', 'yellow', 'green', 'purple', 'orange'];
 
 
 /*
@@ -25,26 +25,26 @@ STEP 7: Create the chart
 =====================================
 */
 
-// const myChart = new Chart(ctx, {
-//   type: 'bar',  // Try changing this later!
-//   data: {
-//     labels: labelColors,
-//     datasets: [{
-//       label: '# of Votes',
-//       data: data,
-//       backgroundColor: labelColors
-//     }]
-//   },
-//   options: {
-//     scales: {
-//       yAxes: [{
-//         ticks: {
-//           beginAtZero: true
-//         }
-//       }]
-//     }
-//   }
-// });
+const myChart = new Chart(ctx, {
+  type: 'bar',  // Try changing this later!
+  data: {
+    labels: labelColors,
+    datasets: [{
+      label: '# of Votes',
+      data: data,
+      backgroundColor: labelColors
+    }]
+  },
+  options: {
+    scales: {
+      yAxes: [{
+        ticks: {
+          beginAtZero: true
+        }
+      }]
+    }
+  }
+});
 
 
 
