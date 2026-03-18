@@ -43,17 +43,17 @@ Local Storage only stores STRINGS.
 So we must convert the settings object into JSON.
 *****************************************************/
 
-// function saveSettings() {
+function saveSettings() {
 
-//   // Convert object → JSON string
-//   let stringify = JSON.stringify(settings);
+  // Convert object → JSON string
+  let stringify = JSON.stringify(settings);
 
-//   // Store JSON string in Local Storage
-//   localStorage.setItem("settings", stringify);
+  // Store JSON string in Local Storage
+  localStorage.setItem("settings", stringify);
 
-//   console.log(stringify); // helpful for demo
+  console.log(stringify); // helpful for demo
 
-// }
+}
 
 
 
@@ -69,21 +69,21 @@ Process:
 3. Convert JSON back to an object
 *****************************************************/
 
-// function loadSettings() {
+function loadSettings() {
 
-//   let getSettings = localStorage.getItem("settings");
+  let getSettings = localStorage.getItem("settings");
 
-//   if (getSettings) {
+  if (getSettings) {
 
-//     console.log(getSettings); // JSON string
+    console.log(getSettings); // JSON string
 
-//     settings = JSON.parse(getSettings);
+    settings = JSON.parse(getSettings);
 
-//     console.log(settings); // object restored
+    console.log(settings); // object restored
 
-//   }
+  }
 
-// }
+}
 
 
 
@@ -95,33 +95,33 @@ When the page loads we want to restore
 the saved state of the application.
 *****************************************************/
 
-// function pageLoad() {
+function pageLoad() {
 
-//   let savedSettings = localStorage.getItem("settings");
+  let savedSettings = localStorage.getItem("settings");
 
-//   // Guard clause
-//   if (!savedSettings) {
-//     return;
-//   }
+  // Guard clause
+  if (!savedSettings) {
+    return;
+  }
 
-//   loadSettings();
+  loadSettings();
 
-//   // Restore Dark Mode
-//   if (settings.darkMode) {
-//     enterDarkMode();
-//   } else {
-//     enterLightMode();
-//   }
+  // Restore Dark Mode
+  if (settings.darkMode) {
+    enterDarkMode();
+  } else {
+    enterLightMode();
+  }
 
-//   // Restore Accordion State
-//   if (settings.open !== null) {
-//     details[settings.open].setAttribute("open", "open")
-//   }
+  // Restore Accordion State
+  if (settings.open !== null) {
+    details[settings.open].setAttribute("open", "open")
+  }
 
-//   // Restore Comment Box
-//   commentBox.value = settings.comment;
+  // Restore Comment Box
+  commentBox.value = settings.comment;
 
-// }
+}
 
 
 
@@ -150,7 +150,7 @@ function enterDarkMode() {
   settings.darkMode = true;
 
   // STEP 8 DEMO
-  // saveSettings();
+  saveSettings();
 
 }
 
@@ -178,7 +178,7 @@ function enterLightMode() {
   settings.darkMode = false;
 
   // STEP 8 DEMO
-  // saveSettings();
+  saveSettings();
 
 }
 
@@ -216,34 +216,34 @@ During the demo we will highlight how
 the state object updates and is saved.
 *****************************************************/
 
-// for (let i = 0; i < details.length; i++) {
+for (let i = 0; i < details.length; i++) {
 
-//   details[i].addEventListener("click", function () {
+  details[i].addEventListener("click", function () {
 
-//     // guard clause
-//     if (settings.open === i) {
-//       settings.open = null;
-//       saveSettings();
-//       return;
-//     }
+    // guard clause
+    if (settings.open === i) {
+      settings.open = null;
+      saveSettings();
+      return;
+    }
 
-//     openDetail = i;
-//     settings.open = i;
+    openDetail = i;
+    settings.open = i;
 
-//     saveSettings();
+    saveSettings();
 
-//     // close other details
-//     for (let j = 0; j < details.length; j++) {
+    // close other details
+    for (let j = 0; j < details.length; j++) {
 
-//       if (j !== openDetail) {
-//         details[j].removeAttribute("open");
-//       }
+      if (j !== openDetail) {
+        details[j].removeAttribute("open");
+      }
 
-//     }
+    }
 
-//   });
+  });
 
-// }
+}
 
 
 
@@ -258,13 +258,13 @@ The "input" event fires every time
 the user changes the text box.
 *****************************************************/
 
-// commentBox.addEventListener("input", function () {
+commentBox.addEventListener("input", function () {
 
-//   settings.comment = commentBox.value;
+  settings.comment = commentBox.value;
 
-//   saveSettings();
+  saveSettings();
 
-// });
+});
 
 
 
@@ -276,4 +276,4 @@ the user changes the text box.
  when the page reloads.
 *****************************************************/
 
-// pageLoad();
+pageLoad();

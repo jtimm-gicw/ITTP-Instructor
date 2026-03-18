@@ -1,6 +1,7 @@
 /* Base styles */
 * {
   font-family: sans-serif;
+  background-color: lightcyan;
 }
 
 body {
@@ -14,8 +15,8 @@ section {
 /* ===== TRANSITIONS ===== */
 
 /* Step 1: Rounded Box - transition */
-/*
-.rounding {
+
+/* .rounding {
   width: 200px;
   height: 200px;
   background-color: #0394e6;
@@ -30,11 +31,11 @@ section {
   border-radius: 50%;
   background-color: #f03c1d;
 }
-*/
+ */
 
 /* Step 2: Button hover/active transitions */
-/*
-.doNothing {
+
+/* .doNothing {
   background-color: #a570da;
   opacity: 0.8;
   outline: 2px solid #ffffff;
@@ -53,37 +54,37 @@ section {
   transition-duration: 100ms;
   transition-timing-function: linear;
   outline: 2px solid yellow;
-}
-*/
+} */
+
 
 /* ===== ANIMATIONS ===== */
 
 /* Step 3: Moving Box Container */
-/*
-.animation {
+
+/* .animation {
   background-color: #cccccc;
   border: 2px solid #bbbbbb;
   border-radius: 3%;
   width: 400px;
   height: 400px;
   position: relative;
-}
-*/
+} */
+
 
 /* Step 4: Keyframes for Moving Box */
-/*
-@keyframes moveRight {
+
+/* @keyframes moveRight {
   0%   { left: 0; top: 0; }
   25%  { left: 90%; top: 25%; }
   50%  { left: 0%; top: 50%; }
   75%  { left: 90%; top: 75%; }
   100% { left: 0%; top: 90%; }
-}
-*/
+} */
+
 
 /* Step 5: Moving Box Element */
-/*
-.animationElement {
+
+/* .animationElement {
   width: 10%;
   height: 10%;
   background-color: #0c8f16;
@@ -93,11 +94,11 @@ section {
   animation-timing-function: linear;
   animation-iteration-count: infinite;
 }
-*/
+ */
 
 /* Step 6: Blinking Text Animation */
-/*
-@keyframes blinkAnimation {
+
+/* @keyframes blinkAnimation {
   0%   { color: #000000; }
   50%  { color: #ffffff; }
   100% { color: #000000; }
@@ -108,5 +109,158 @@ section {
   animation-duration: 350ms;
   animation-iteration-count: infinite;
   animation-timing-function: steps(3);
+} */
+
+
+/* ========================================================= */
+/* 🔥 BONUS DEMO SECTION: COOL TRANSITIONS & ANIMATIONS       */
+/* Uncomment each section during class to demo step-by-step   */
+/* ========================================================= */
+
+
+/* ========================================================= */
+/* 1️⃣ CARD LIFT HOVER EFFECT (Modern UI Feel) */
+/* ========================================================= */
+
+/* 
+.card {
+  width: 200px;                     // sets the width of the card
+  height: 200px;                    // sets the height of the card
+  background-color: #ffffff;        // white background
+  border: 1px solid #ccc;           // light border
+  border-radius: 10px;              // rounded corners
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1); // subtle shadow
+  transition: transform 0.3s ease,  // animate movement (transform)
+              box-shadow 0.3s ease; // animate shadow change
+}
+
+.card:hover {
+  transform: translateY(-10px);     // moves card UP 10px
+  box-shadow: 0 10px 20px rgba(0,0,0,0.2); // deeper shadow = "lift" effect
+} */
+
+
+/* 
+.card {
+  width: 200px;                     
+  height: 200px;                    
+  background-color: #ffffff;        
+  border: 1px solid #ccc;           
+  border-radius: 10px;              
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1); 
+  transition: transform 0.3s ease,  
+              box-shadow 0.3s ease; 
+}
+
+.card:hover {
+  transform: translateY(-10px);     
+  box-shadow: 0 10px 20px rgba(0,0,0,0.2); 
+} */
+
+/* ========================================================= */
+/* 2️⃣ PULSE ANIMATION (Attention Grabber) */
+/* ========================================================= */
+
+/*
+@keyframes pulse {
+  0% {
+    transform: scale(1);            // normal size
+  }
+  50% {
+    transform: scale(1.2);          // grows 20% bigger
+  }
+  100% {
+    transform: scale(1);            // returns to normal
+  }
+}
+
+.pulse {
+  width: 100px;                     // element width
+  height: 100px;                    // element height
+  background-color: #ff4757;        // red color
+  border-radius: 50%;               // makes it a circle
+  animation-name: pulse;            // connects to @keyframes
+  animation-duration: 1s;           // 1 second per cycle
+  animation-iteration-count: infinite; // loops forever
+  animation-timing-function: ease-in-out; // smooth grow/shrink
+}
+*/
+
+
+/*
+@keyframes pulse {
+  0% {
+    transform: scale(1);            
+  }
+  50% {
+    transform: scale(1.2);          
+  }
+  100% {
+    transform: scale(1);            
+  }
+}
+
+.pulse {
+  width: 100px;                     
+  height: 100px;                    
+  background-color: #ff4757;        
+  border-radius: 50%;               
+  animation-name: pulse;            
+  animation-duration: 1s;           
+  animation-iteration-count: infinite; 
+  animation-timing-function: ease-in-out; 
+}
+*/
+
+
+/* ========================================================= */
+/* 3️⃣ SLIDING UNDERLINE EFFECT (Clean Navigation UI) */
+/* ========================================================= */
+
+/*
+.nav-link {
+  position: relative;               // allows positioning of pseudo-element
+  text-decoration: none;            // removes default underline
+  color: #333;                      // text color
+}
+
+.nav-link::after {
+  content: "";                      // required to create pseudo-element
+  position: absolute;               // positions relative to parent
+  left: 0;                          // start from left side
+  bottom: -5px;                     // slightly below text
+  width: 0%;                        // starts invisible (no width)
+  height: 2px;                      // thickness of underline
+  background-color: #0077ff;        // underline color
+  transition: width 0.3s ease;      // animate width change
+}
+
+.nav-link:hover::after {
+  width: 100%;                      // expands underline across text
+}
+*/
+
+
+
+/*
+.nav-link {
+  position: relative;               
+  text-decoration: none;            
+  color: #333;                      
+}
+
+.nav-link::after {
+  content: "";                      // required to create pseudo-element
+  position: absolute;               // positions relative to parent
+  left: 0;                          // start from left side
+  bottom: -5px;                     // slightly below text
+  width: 0%;                        // starts invisible (no width)
+  height: 2px;                      // thickness of underline
+  background-color: #0077ff;        // underline color
+  transition: width 0.3s ease;      // animate width change
+}
+
+.nav-link:hover::after {
+  width: 100%;                      // expands underline across text
 }
 */
