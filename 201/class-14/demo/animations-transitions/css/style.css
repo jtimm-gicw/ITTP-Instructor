@@ -16,7 +16,7 @@ section {
 
 /* Step 1: Rounded Box - transition */
 
-/* .rounding {
+.rounding {
   width: 200px;
   height: 200px;
   background-color: #0394e6;
@@ -31,11 +31,11 @@ section {
   border-radius: 50%;
   background-color: #f03c1d;
 }
- */
+
 
 /* Step 2: Button hover/active transitions */
 
-/* .doNothing {
+.doNothing {
   background-color: #a570da;
   opacity: 0.8;
   outline: 2px solid #ffffff;
@@ -54,37 +54,37 @@ section {
   transition-duration: 100ms;
   transition-timing-function: linear;
   outline: 2px solid yellow;
-} */
+}
 
 
 /* ===== ANIMATIONS ===== */
 
 /* Step 3: Moving Box Container */
 
-/* .animation {
+.animation {
   background-color: #cccccc;
   border: 2px solid #bbbbbb;
   border-radius: 3%;
   width: 400px;
   height: 400px;
   position: relative;
-} */
+}
 
 
 /* Step 4: Keyframes for Moving Box */
 
-/* @keyframes moveRight {
+@keyframes moveRight {
   0%   { left: 0; top: 0; }
   25%  { left: 90%; top: 25%; }
   50%  { left: 0%; top: 50%; }
   75%  { left: 90%; top: 75%; }
   100% { left: 0%; top: 90%; }
-} */
+}
 
 
 /* Step 5: Moving Box Element */
 
-/* .animationElement {
+.animationElement {
   width: 10%;
   height: 10%;
   background-color: #0c8f16;
@@ -94,11 +94,11 @@ section {
   animation-timing-function: linear;
   animation-iteration-count: infinite;
 }
- */
+
 
 /* Step 6: Blinking Text Animation */
 
-/* @keyframes blinkAnimation {
+@keyframes blinkAnimation {
   0%   { color: #000000; }
   50%  { color: #ffffff; }
   100% { color: #000000; }
@@ -108,8 +108,8 @@ section {
   animation-name: blinkAnimation;
   animation-duration: 350ms;
   animation-iteration-count: infinite;
-  animation-timing-function: steps(3);
-} */
+  animation-timing-function: steps(5);
+}
 
 
 /* ========================================================= */
@@ -140,7 +140,7 @@ section {
 } */
 
 
-/* 
+
 .card {
   width: 200px;                     
   height: 200px;                    
@@ -154,8 +154,8 @@ section {
 
 .card:hover {
   transform: translateY(-10px);     
-  box-shadow: 0 10px 20px rgba(0,0,0,0.2); 
-} */
+  box-shadow: 0 10px 20px rgba(219, 36, 36, 0.2); 
+}
 
 /* ========================================================= */
 /* 2️⃣ PULSE ANIMATION (Attention Grabber) */
@@ -187,7 +187,7 @@ section {
 */
 
 
-/*
+
 @keyframes pulse {
   0% {
     transform: scale(1);            
@@ -210,7 +210,7 @@ section {
   animation-iteration-count: infinite; 
   animation-timing-function: ease-in-out; 
 }
-*/
+
 
 
 /* ========================================================= */
@@ -242,7 +242,7 @@ section {
 
 
 
-/*
+
 .nav-link {
   position: relative;               
   text-decoration: none;            
@@ -250,17 +250,16 @@ section {
 }
 
 .nav-link::after {
-  content: "";                      // required to create pseudo-element
-  position: absolute;               // positions relative to parent
-  left: 0;                          // start from left side
-  bottom: -5px;                     // slightly below text
-  width: 0%;                        // starts invisible (no width)
-  height: 2px;                      // thickness of underline
-  background-color: #0077ff;        // underline color
-  transition: width 0.3s ease;      // animate width change
+  content: "";                   
+  position: absolute;            
+  left: 0;                         
+  bottom: -5px;                     
+  width: 0%;                        
+  height: 2px;                      
+  background-color: #0077ff;        
+  transition: width 0.3s ease;      
 }
 
 .nav-link:hover::after {
-  width: 100%;                      // expands underline across text
+  width: 100%;                    
 }
-*/
