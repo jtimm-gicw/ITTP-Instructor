@@ -65,15 +65,3 @@ const isPositive = num => num > 0;
 ```js
 const subtract = (a, b) => a - b;
 ```
-
----
-
-## Notes
-
-- Multiple correct answers are possible
-- Focus on correct arrow syntax and readability
-- Encourage students to try both full and simplified versions
-
----
-
-Great work practicing arrow functions 🚀

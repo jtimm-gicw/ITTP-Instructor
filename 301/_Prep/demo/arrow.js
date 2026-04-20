@@ -1,160 +1,202 @@
-// 301-Prep-Demo_ES6_Classes-T.js
+'use strict';
+
+/************************************
+ ARROW FUNCTIONS
+************************************/
 
 
-/* 
-PART 1 — What is Data Modeling?
+// =============================
+// STEP 1: FUNCTION EXPRESSION (OLD WAY)
+// =============================
 
-We model real-world things like Person, Dog, Car.
-Each has:
-Attributes (nouns) → data: name, age, color
-Behaviors (verbs) → actions: walk(), speak(), drive()
-*/
-
-/* 
-PART 2 — OLD WAY: Constructor Functions
-*/
-
-// Step 1: Create a constructor function
-// function Animal(name, legs) {
-//   this.name = name;
-//   this.legs = legs;
-// }
-
-// Step 2: Add behavior via prototype
-// Animal.prototype.walk = function() {
-//   this.isWalking = true;
+// const theOldWay = function(course) {
+//   return `I am currently enrolled in ${course}`;
 // };
 
-// Step 3: Create an instance
-// let dog = new Animal('Rex', 4);
-// dog.walk();
-// console.log(dog); // {name: "Rex", legs: 4, isWalking: true}
+// console.log('Old way:', theOldWay('Code 301'));
 
-/* 
-PART 3 — Inheritance with Constructor Functions (Messy)
-*/
 
-// Step 4: Subclass using constructor functions
-// function Dog(name, legs) {
-//   Animal.call(this, name, legs); // call parent constructor
+// =============================
+// STEP 2: BASIC ARROW FUNCTION
+// =============================
+
+// const theNewWay = (course) => {
+//   return `I am currently enrolled in ${course}`;
+// };
+
+// console.log('Arrow function:', theNewWay('Code 301'));
+
+
+// =============================
+// STEP 3: REMOVE PARENTHESES (ONE PARAM)
+// =============================
+
+// const withoutParens = course => {
+//   return `I am currently enrolled in ${course}`;
+// };
+
+// console.log('Without parentheses:', withoutParens('Code 301'));
+
+
+// =============================
+// STEP 4: ONE-LINER (IMPLICIT RETURN)
+// =============================
+
+// const oneLiner = course => `I am currently enrolled in ${course}`;
+
+// console.log('One-liner:', oneLiner('Code 301'));
+
+
+// =============================
+// STEP 5: MULTIPLE PARAMETERS
+// =============================
+
+// const add = function(num1, num2) {
+//   return `${num1} + ${num2} = ${num1 + num2}`;
+// };
+
+// console.log(add(4, 5));
+
+
+// =============================
+// STEP 6: MULTIPLE PARAMS (ARROW)
+// =============================
+
+// const addArrow = (num1, num2) => `${num1} + ${num2} = ${num1 + num2}`;
+
+// console.log(addArrow(4, 5));
+
+
+// =============================
+// STEP 7: MULTI-LINE FUNCTION
+// =============================
+
+// const multiLiner = word => {
+//   word = word.toUpperCase();
+//   return word;
+// };
+
+// console.log(multiLiner('hello'));
+
+
+// =============================
+// STEP 8: RETURNING OBJECTS (OLD WAY)
+// =============================
+
+// const oldObject = function(array) {
+//   return {
+//     first: array[0],
+//     second: array[1],
+//     third: array[2]
+//   };
+// };
+
+// console.log(oldObject(['a', 'b', 'c']));
+
+
+// =============================
+// STEP 9: RETURNING OBJECTS (ARROW WAY)
+// =============================
+
+// const newObject = array => ({
+//   first: array[0],
+//   second: array[1],
+//   third: array[2]
+// });
+
+// console.log(newObject(['a', 'b', 'c']));
+
+
+// =============================
+// STEP 10: PRACTICE CONVERSIONS
+// =============================
+
+// let sum = function(a, b, c, d) {
+//   return a + b + c + d;
+// };
+
+// console.log(sum(1, 2, 3, 4));
+
+
+// let message = function(name) {
+//   return `Hello, ${name}!`;
+// };
+
+// console.log(message('Allie'));
+
+
+// =============================
+// STEP 11: THIS (IMPORTANT!)
+// =============================
+
+// function Student(name) {
+//   this.name = name;
 // }
-// Dog.prototype = Object.create(Animal.prototype); // link prototype
-// let myDog = new Dog('Buddy', 4);
-// console.log(myDog);
 
-/* 
-PART 4 — ES6 Classes (Modern Way)
-*/
+// Student.prototype.sayName = function() {
+//   console.log(this.name);
+// };
 
-/* 
-PART 5 — Create a Class
-*/
+// let joe = new Student('Joe');
+// joe.sayName(); // Works
 
-// Step 5: Define class
-// class Animal {
-//   constructor(name, legs) {
-//     this.name = name;
-//     this.legs = legs;
-//   }
 
-//   walk() {
-//     this.isWalking = true;
-//   }
+// =============================
+// STEP 12: THIS BREAKS WITH ARROW
+// =============================
 
-//   eat() {
-//     this.isEating = true;
-//   }
+// Student.prototype.sayName = () => {
+//   console.log(this.name);
+// };
+
+// joe.sayName(); // ❌ undefined or window
+
+
+// =============================
+// STEP 13: SCOPE COMPARISON
+// =============================
+
+// Student.prototype.scope = function() {
+//   console.log('Normal function this:', this);
+// };
+
+// Student.prototype.scopeArrow = () => {
+//   console.log('Arrow function this:', this);
+// };
+
+// joe.scope();        // correct
+// joe.scopeArrow();   // incorrect
+
+
+// =============================
+// STEP 14: STUDENT PRACTICE
+// =============================
+
+// TODO:
+// Convert these to arrow functions:
+
+// function multiply(a, b) {
+//   return a * b;
 // }
 
-// Step 6: Create an instance
-// let dog = new Animal('Rex', 4);
-// dog.walk();
-// dog.eat();
-// console.log(dog); // {name: "Rex", legs: 4, isWalking: true, isEating: true}
-
-/* 
-PART 6 — Inheritance with Classes
-*/
-
-// Step 7: Create subclass
-// class Dog extends Animal {
-//   speak() {
-//     console.log('Woof!');
-//   }
+// function greet(name) {
+//   return `Hi ${name}`;
 // }
 
-// let myDog = new Dog('Buddy', 4);
-// myDog.walk();   // inherited
-// myDog.eat();    // inherited
-// myDog.speak();  // own method
 
-/* 
-PART 7 — Custom Constructor with super
-*/
+// =============================
+// STEP 15: CHALLENGE
+// =============================
 
-// Step 8: Subclass with extra property
-// class Dog extends Animal {
-//   constructor(name, legs, furType) {
-//     super(name, legs); // call parent constructor
-//     this.furType = furType;
-//   }
+// TODO:
+// Write an arrow function that:
+// - Takes an array
+// - Returns only even numbers
 
-//   speak() {
-//     console.log('Woof!');
-//   }
-// }
-
-// let myDog2 = new Dog('Buddy', 4, 'short hair');
-// console.log(myDog2); // {name: "Buddy", legs: 4, furType: "short hair"}
-
-/* 
-PART 8 — What’s REALLY Happening?
-*/
-
-// Dog.prototype = Object.create(Animal.prototype);
-/* 
-PART 9 — Constructor vs Class
-// Constructor Functions: old syntax, manual inheritance
-// Classes: modern syntax, cleaner, uses super(), extends
-*/
-
-/* 
-Student Task-
-Convert this constructor function to a class
-*/
-
-// Old function
-// function Bird(name) {
-//   Animal.call(this, name);
-// }
-// Bird.prototype.fly = function() {};
-
-// Converted class
-// class Bird extends Animal {
-//   fly() {
-//     console.log(`${this.name} is flying!`);
-//   }
-// }
-
-// let parrot = new Bird('Polly');
-// parrot.fly(); // Polly is flying!
+// Example:
+// [1,2,3,4] → [2,4]
 
 
-/* 
-FAQ:
-1. Are classes replacing constructor functions? No
-2. Are classes “real” OOP like Java? Not exactly
-3. Why use classes? Cleaner syntax, easier inheritance
-4. What does extends do? Links prototypes
-5. What does super() do? Calls parent constructor
-6. Do classes improve performance? No, better developer experience
-*/
-
-/* 
-TIP:
-Practice order:
-- Model real-world object (Dog, Car, User)
-- Write attributes + methods
-- Create base class
-- Extend into subclasses
-*/
+/************************************
+ END OF FILE
+************************************/
