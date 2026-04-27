@@ -15,11 +15,11 @@ let people = ['John', 'Cathy', 'Allie', 'Zach'];
 
 // Uncomment to demo:
 
-/*
+
 for (let i = 0; i < people.length; i++) {
   console.log(people[i]);
 }
-*/
+
 
 
 // ==========================================
@@ -28,14 +28,14 @@ for (let i = 0; i < people.length; i++) {
 
 // Uncomment to demo:
 
-/*
+
 for (let i = 0; i < people.length; i++) {
   if (i === 2) {
     break; // stops the loop completely
   }
   console.log(people[i]);
 }
-*/
+
 
 
 // ==========================================
@@ -44,14 +44,13 @@ for (let i = 0; i < people.length; i++) {
 
 // Uncomment to demo:
 
-/*
 for (let i = 0; i < people.length; i++) {
   if (i === 1) {
     continue; // skips Cathy
   }
   console.log(people[i]);
 }
-*/
+
 
 
 // ==========================================
@@ -60,7 +59,7 @@ for (let i = 0; i < people.length; i++) {
 
 // Uncomment to demo:
 
-/*
+
 function findIt(arr, pos = 0) {
   for (let i = 0; i < arr.length; i++) {
     if (i === pos) {
@@ -71,7 +70,6 @@ function findIt(arr, pos = 0) {
 }
 
 console.log(findIt(people, 3));
-*/
 
 
 // ==========================================
@@ -80,12 +78,12 @@ console.log(findIt(people, 3));
 
 // Uncomment to demo:
 
-/*
+
 people.forEach(function(item, idx) {
   console.log(idx);
   console.log(item);
 });
-*/
+
 
 
 // ==========================================
@@ -94,11 +92,11 @@ people.forEach(function(item, idx) {
 
 // Uncomment to demo:
 
-/*
+
 people.forEach((item, idx) => {
   console.log(item);
 });
-*/
+
 
 
 // ==========================================
@@ -107,13 +105,13 @@ people.forEach((item, idx) => {
 
 // Uncomment to demo:
 
-/*
+
 let processor = (item, idx) => {
   console.log(item);
 };
 
 people.forEach(processor);
-*/
+
 
 
 // ==========================================
@@ -122,22 +120,21 @@ people.forEach(processor);
 
 // Uncomment to explain (these will NOT work):
 
-/*
+
 people.forEach((item, idx) => {
   if (idx === 2) {
     break; // ❌ ERROR
   }
 });
-*/
 
-/*
+
 people.forEach((item, idx) => {
   if (idx === 2) {
     return; // ❌ only exits THIS iteration, not the loop
   }
   console.log(item);
 });
-*/
+
 
 
 // ==========================================
