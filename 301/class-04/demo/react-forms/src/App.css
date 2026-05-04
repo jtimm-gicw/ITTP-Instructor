@@ -1,0 +1,44 @@
+/* Centers all text inside the App */
+.App {
+  text-align: center;
+}
+
+/* Styles the React logo */
+.App-logo {
+  height: 40vmin;
+  pointer-events: none; /* prevents clicking the logo */
+}
+
+/* Only animate logo if user has no motion preference */
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+/* Main page layout styling */
+.App-header {
+  background-color: #282c34; /* dark background */
+  min-height: 100vh; /* full screen height */
+  display: flex;
+  flex-direction: column; /* stack items vertically */
+  align-items: center; /* center horizontally */
+  justify-content: center; /* center vertically */
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+/* Link styling */
+.App-link {
+  color: #61dafb;
+}
+
+/* Animation: spins the logo */
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
