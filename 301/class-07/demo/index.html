@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>JavaScript .sort() Live Demo</title>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: linear-gradient(135deg, #0f172a, #1e293b);
+      color: #e2e8f0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+
+    .container {
+      width: 90%;
+      max-width: 900px;
+      background: #111827;
+      border-radius: 12px;
+      padding: 30px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 10px;
+      color: #38bdf8;
+    }
+
+    p {
+      text-align: center;
+      color: #94a3b8;
+      margin-bottom: 25px;
+    }
+
+    .panel {
+      background: #1f2937;
+      padding: 20px;
+      border-radius: 10px;
+      margin-bottom: 15px;
+    }
+
+    .label {
+      font-size: 14px;
+      color: #38bdf8;
+      margin-bottom: 8px;
+    }
+
+    .output {
+      font-family: monospace;
+      background: #0b1220;
+      padding: 10px;
+      border-radius: 6px;
+      color: #f8fafc;
+      min-height: 40px;
+    }
+
+    .hint {
+      font-size: 13px;
+      color: #94a3b8;
+      text-align: center;
+      margin-top: 15px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="container">
+    <h1>JavaScript .sort() Live Demo</h1>
+    <p>Open your console AND watch the visual outputs below</p>
+
+    <div class="panel">
+      <div class="label">📊 Numbers Before & After Sorting</div>
+      <div class="output" id="numbersOutput">Waiting for JS...</div>
+    </div>
+
+    <div class="panel">
+      <div class="label">👥 People Sorted by Name</div>
+      <div class="output" id="peopleOutput">Waiting for JS...</div>
+    </div>
+
+    <div class="panel">
+      <div class="label">🧪 Bonus: Sorted by Role</div>
+      <div class="output" id="roleOutput">Waiting for JS...</div>
+    </div>
+
+    <div class="hint">
+      👉 Open DevTools Console to see step-by-step logs from sort.js
+    </div>
+  </div>
+
+  <!-- Connect your JS file here -->
+  <script src="sort.js"></script>
+
+</body>
+</html>

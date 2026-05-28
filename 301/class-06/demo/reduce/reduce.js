@@ -7,6 +7,9 @@ const numbers = [1, 2, 3, 4, 5, 6, 7];
 
 console.log('Original numbers array:', numbers);
 
+// array.reduce(((accumulator, val, idx) => {
+  // your code
+//}), intialValue);)
 
 // Use .reduce() to add all numbers together
 const total = numbers.reduce((accumulator, val, idx) => {
