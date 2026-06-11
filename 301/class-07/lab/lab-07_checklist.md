@@ -1,4 +1,4 @@
-# Lab: City Explorer API (Weather & Errors)
+# Lab 7: City Explorer API (Weather & Errors)
 
 ## 💡 The Big Picture (Plain English Summary)
 
