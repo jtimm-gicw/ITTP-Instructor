@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Minecraft Nested Loops & 2D Arrays</title>
+
+  <style>
+
+    /* ==========================
+       GLOBAL STYLES
+    ========================== */
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background-color: #4f7942;
+      font-family: 'Trebuchet MS', sans-serif;
+      color: white;
+      min-height: 100vh;
+      padding: 2rem;
+    }
+
+    /* ==========================
+       HEADER
+    ========================== */
+
+    header {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+
+    h1 {
+      font-size: 3rem;
+      color: #ffd700;
+      text-shadow: 4px 4px #333;
+      margin-bottom: 1rem;
+    }
+
+    h2 {
+      color: #7ec850;
+      margin-bottom: 1rem;
+    }
+
+    /* ==========================
+       MAIN CONTAINER
+    ========================== */
+
+    .container {
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    /* ==========================
+       MINECRAFT BLOCK CARD
+    ========================== */
+
+    .block {
+      background-color: #8b5a2b;
+      border: 5px solid #4b2e13;
+      border-radius: 8px;
+      padding: 1.5rem;
+      margin-bottom: 1.5rem;
+      box-shadow: 6px 6px 0px #2f1b0f;
+    }
+
+    .block h3 {
+      color: #ffd700;
+      margin-bottom: 1rem;
+    }
+
+    .block p {
+      line-height: 1.6;
+    }
+
+    /* ==========================
+       CODE DISPLAY
+    ========================== */
+
+    pre {
+      background-color: #2f2f2f;
+      color: #00ff99;
+      padding: 1rem;
+      border-radius: 8px;
+      overflow-x: auto;
+      border: 3px solid #555;
+      margin-top: 1rem;
+    }
+
+    /* ==========================
+       BUTTON
+    ========================== */
+
+    button {
+      background-color: #00aaff;
+      color: white;
+      border: none;
+      padding: 1rem 2rem;
+      font-size: 1rem;
+      font-weight: bold;
+      border-radius: 8px;
+      cursor: pointer;
+      margin-top: 1rem;
+      transition: 0.3s;
+    }
+
+    button:hover {
+      background-color: #0088cc;
+      transform: scale(1.05);
+    }
+
+    /* ==========================
+       OUTPUT AREA
+    ========================== */
+
+    #output {
+      background-color: #222;
+      border: 4px solid #666;
+      border-radius: 8px;
+      padding: 1rem;
+      min-height: 200px;
+      margin-top: 1rem;
+      font-family: monospace;
+      white-space: pre-wrap;
+      color: #7CFC00;
+    }
+
+    /* ==========================
+       MINECRAFT GRID DEMO
+    ========================== */
+
+    .grid-demo {
+      display: grid;
+      grid-template-columns: repeat(3, 100px);
+      gap: 5px;
+      justify-content: center;
+      margin-top: 1rem;
+    }
+
+    .cell {
+      background-color: #7ec850;
+      border: 3px solid #4b2e13;
+      height: 100px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-weight: bold;
+      color: black;
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 3rem;
+      color: #ddd;
+    }
+
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>⛏️ Minecraft Nested Loops Lab ⛏️</h1>
+    <h2>Exploring Nested For Loops & 2D Arrays</h2>
+  </header>
+
+  <main class="container">
+
+    <section class="block">
+      <h3>🌎 What is a 2D Array?</h3>
+
+      <p>
+        A 2D Array is simply an array that contains other arrays.
+        Think of it like a Minecraft map made of rows and columns.
+      </p>
+
+      <div class="grid-demo">
+
+        <div class="cell">Stone</div>
+        <div class="cell">Dirt</div>
+        <div class="cell">Wood</div>
+
+        <div class="cell">Coal</div>
+        <div class="cell">Iron</div>
+        <div class="cell">Gold</div>
+
+        <div class="cell">Sand</div>
+        <div class="cell">Water</div>
+        <div class="cell">Lava</div>
+
+      </div>
+
+    </section>
+
+    <section class="block">
+
+      <h3>🧱 Run JavaScript Demo</h3>
+
+      <p>
+        Open DevTools (F12) and watch the console output from the nested loop examples.
+      </p>
+
+      <button onclick="runDemo()">
+        Run Minecraft Demo
+      </button>
+
+      <div id="output">
+Click the button to display output...
+      </div>
+
+    </section>
+
+  </main>
+
+  <footer>
+    Built for learning JavaScript 🚀
+  </footer>
+
+  <script src="2D-arrays.js"></script>
+
+  <script>
+
+    function runDemo() {
+
+      const output =
+`Steve says hello to Alex
+Steve says hello to Villager
+
+Alex says hello to Steve
+Alex says hello to Villager
+
+Villager says hello to Steve
+Villager says hello to Alex
+
+Found Gold at Row 1, Column 2`;
+
+      document.getElementById('output').textContent = output;
+
+    }
+
+  </script>
+
+</body>
+</html>
