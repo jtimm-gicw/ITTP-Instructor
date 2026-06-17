@@ -378,7 +378,7 @@ We can CREATE a 2D array using nested loops.
 Let's build a 3x3 grass field.
 */
 
-c/*
+/*
 =========================================
 BUILDING A 3x3 MINECRAFT GRASS FIELD
 =========================================
