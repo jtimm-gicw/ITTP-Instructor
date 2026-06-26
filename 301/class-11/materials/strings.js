@@ -81,8 +81,8 @@ let str3 = "My instructors shred";
 
 console.log(str3.charAt(0));
 // "M"
-
-console.log(str3.charAt(3));
+let char = str3.charAt(3)
+console.log(char);
 // "i"
 
 /*
