@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Regex 101 Demo | Code 301</title>
+
+<style>
+/* ==========================
+   PAGE STYLING
+========================== */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+
+    background: linear-gradient(135deg,#1e3c72,#2a5298,#0f2027);
+    color: white;
+}
+
+/* ==========================
+   HEADER
+========================== */
+
+header{
+    text-align:center;
+    padding:40px 20px;
+}
+
+header h1{
+    margin:0;
+    font-size:3rem;
+}
+
+header p{
+    font-size:1.2rem;
+    color:#d7e7ff;
+}
+
+/* ==========================
+   MAIN CONTAINER
+========================== */
+
+.container{
+    width:90%;
+    max-width:1000px;
+    margin:auto;
+    padding-bottom:50px;
+}
+
+/* ==========================
+   CARD
+========================== */
+
+.card{
+
+    background:white;
+    color:#333;
+
+    margin:30px 0;
+    padding:30px;
+
+    border-radius:18px;
+
+    box-shadow:
+        0 15px 30px rgba(0,0,0,.25);
+}
+
+/* ==========================
+   HEADINGS
+========================== */
+
+h2{
+    color:#1e3c72;
+    margin-top:0;
+}
+
+h3{
+    color:#2a5298;
+}
+
+/* ==========================
+   CODE
+========================== */
+
+code{
+    background:#edf3ff;
+    color:#1b2a49;
+
+    padding:3px 8px;
+
+    border-radius:6px;
+
+    font-size:1rem;
+}
+
+pre{
+
+    background:#17263c;
+    color:#7CFC8A;
+
+    padding:20px;
+
+    border-radius:10px;
+
+    overflow:auto;
+}
+
+/* ==========================
+   GRID
+========================== */
+
+.grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+
+    gap:20px;
+}
+
+.info-box{
+
+    background:#edf5ff;
+
+    border-left:6px solid #2a5298;
+
+    padding:18px;
+
+    border-radius:10px;
+}
+
+.info-box h4{
+
+    margin-top:0;
+
+    color:#1e3c72;
+}
+
+/* ==========================
+   TABLE
+========================== */
+
+table{
+
+    width:100%;
+
+    border-collapse:collapse;
+}
+
+th{
+
+    background:#1e3c72;
+
+    color:white;
+
+    padding:12px;
+}
+
+td{
+
+    border:1px solid #ddd;
+
+    padding:10px;
+}
+
+tr:nth-child(even){
+
+    background:#f5f8fc;
+}
+
+/* ==========================
+   FOOTER
+========================== */
+
+footer{
+
+    text-align:center;
+
+    padding:25px;
+
+    color:white;
+
+    opacity:.8;
+}
+</style>
+
+</head>
+<body>
+
+<header>
+
+<h1>🔍 Regular Expressions (Regex)</h1>
+
+<p>Finding Patterns in Strings with JavaScript</p>
+
+</header>
+
+
+<div class="container">
+
+<div class="card">
+
+<h2>Today's Goal</h2>
+
+<p>
+
+Regular Expressions (<strong>Regex</strong>) are a way to search for
+<strong>patterns</strong> inside text.
+
+</p>
+
+<p>
+
+Instead of searching for one exact word, Regex lets us search for
+things like:
+
+</p>
+
+<ul>
+
+<li>✔ Email addresses</li>
+
+<li>✔ Phone numbers</li>
+
+<li>✔ ZIP Codes</li>
+
+<li>✔ Password requirements</li>
+
+<li>✔ Words containing certain letters</li>
+
+<li>✔ Numbers inside text</li>
+
+</ul>
+
+</div>
+
+
+
+<div class="card">
+
+<h2>Open the Console</h2>
+
+<p>
+
+This demo prints everything to the browser console.
+
+</p>
+
+<pre>
+Windows:
+CTRL + SHIFT + J
+
+or
+
+F12
+
+then click Console
+</pre>
+
+<p>
+
+As you read the JavaScript file,
+watch each example appear in the console.
+
+</p>
+
+</div>
+
+
+
+<div class="card">
+
+<h2>Regex Cheat Sheet</h2>
+
+<div class="grid">
+
+<div class="info-box">
+
+<h4>Basic Search</h4>
+
+<p><code>/cat/</code></p>
+
+<p>Find the word "cat"</p>
+
+</div>
+
+
+<div class="info-box">
+
+<h4>Ignore Capital Letters</h4>
+
+<p><code>/cat/i</code></p>
+
+<p>Matches Cat, CAT, cat...</p>
+
+</div>
+
+
+<div class="info-box">
+
+<h4>Find Every Match</h4>
+
+<p><code>/cat/g</code></p>
+
+<p>Global Search</p>
+
+</div>
+
+
+<div class="info-box">
+
+<h4>Character Ranges</h4>
+
+<p><code>[A-Z]</code></p>
+
+<p>Capital letters</p>
+
+</div>
+
+
+<div class="info-box">
+
+<h4>Numbers</h4>
+
+<p><code>[0-9]</code></p>
+
+<p>Any digit</p>
+
+</div>
+
+
+<div class="info-box">
+
+<h4>Word Characters</h4>
+
+<p><code>\w</code></p>
+
+<p>Letters and numbers</p>
+
+</div>
+
+
+<div class="info-box">
+
+<h4>Whitespace</h4>
+
+<p><code>\s</code></p>
+
+<p>Spaces or tabs</p>
+
+</div>
+
+
+<div class="info-box">
+
+<h4>Word Boundary</h4>
+
+<p><code>\b</code></p>
+
+<p>Beginning or end of a word</p>
+
+</div>
+
+</div>
+
+</div>
+
+
+
+<div class="card">
+
+<h2>JavaScript Methods</h2>
+
+<table>
+
+<tr>
+
+<th>Method</th>
+
+<th>Purpose</th>
+
+</tr>
+
+<tr>
+
+<td><code>.test()</code></td>
+
+<td>Returns true or false if a match exists.</td>
+
+</tr>
+
+<tr>
+
+<td><code>.match()</code></td>
+
+<td>Returns an array of all matches.</td>
+
+</tr>
+
+<tr>
+
+<td><code>.replace()</code></td>
+
+<td>Replaces matching text with something else.</td>
+
+</tr>
+
+</table>
+
+</div>
+
+
+
+<div class="card">
+
+<h2>Remember</h2>
+
+<p>
+
+😊 Nobody memorizes Regex.
+
+</p>
+
+<p>
+
+Professional developers regularly use online tools to help write
+and test Regular Expressions.
+
+</p>
+
+<p>
+
+The important part is understanding that Regex searches for
+<strong>patterns</strong>, not just exact words.
+
+</p>
+
+</div>
+
+</div>
+
+<footer>
+
+Code 301 • Class 13 • Regular Expressions (Regex)
+
+</footer>
+
+<!-- Connect the JavaScript file -->
+<script src="regex.js"></script>
+
+</body>
+</html>
