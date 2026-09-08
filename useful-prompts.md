@@ -12,3 +12,5 @@ MUST SHOW... + CAN SKIP or SHORTEN":
 
 
 ## Code Challenges - WTI
+
+/eli10 I am wanting to practice for a technical whiteboard interview. Act as a coding instructor and help guide me through different the steps of a technical whiteboard interview- 1. problem domains, in how to solve, 2. think simple test cases and edge cases, 3. how this could be visualized as an image or diagram, 4. create an simple and easy to understand algorithm to solve the problem,5. pseudocode needed to explain the algorithm, 6a. how to verify using a simple test case, 6b. how to understand and explain the Big-O.:  
