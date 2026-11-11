@@ -2,7 +2,7 @@
 
 ## Reading Assignment
 
-Act as a coding instructor and answer the questions in clear concise terms. Use simplified language and reduce tech jargon.  If technical terms must be used, define them in easy-to-understand language.  Clearly number the questions and label the answers with "Answer".
+Act as a coding instructor and answer the questions in clear concise terms. Use simplified language and reduce tech jargon.  If technical terms must be used, define them in easy-to-understand language.  Clearly number the questions and label the answers with "Answer".:
 
 ## Demos
 
